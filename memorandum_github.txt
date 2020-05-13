@@ -1,0 +1,53 @@
+-- 1. Structure ----------------------------------------------------------------
+
+Page de notre "organization" sur GitHub:
+https://github.com/superlowres
+
+Page de notre "repository":
+https://github.com/superlowres/superlowres.github.io
+
+Page live:
+superlowres.github.io
+
+
+-- 2. Ajouter ou modifier ses fichiers -----------------------------------------
+
+NOTE:
+L’ideal est de pas travailler directement sur le branch "master"
+mais de créer un branch spécifique pour les modifications.
+
+Préparation:
+a.  S’assurer d’etre sur le branch "master"
+b.  Clicquer sur "Fetch origin" pour la mise au jour du projet
+c.  Depuis le menu choisir "Branch > New branch"
+    inserez un nom, p.ex. agy-ex-1
+d.  S’assurer d’etre sur le nouveau branch agy-ex-1
+
+Travail:
+e.  Ajouter ses fichiers / modifier les fichiers
+f.  Vérifier que les modifications son apparues (sous "Changes")
+g.  Inserer un message pour le commit
+    (et une eventuelle description, mais pas nécessaire)
+h.  Pousser sur "Commit to agy-ex-1",
+    les modifications sont maintentant sauveguardées
+i.  Il est maintenant possibile de continuer à faire
+    des modifications ulterieures (répéter le cycle de e. a h.)
+    ou changer le branch pour travailler sur des autres fichiers ou "features"
+
+Merge:
+j.  Rétourner sur le branch "master"
+k.  Le mettre au jour en poussant sur "Fetch origin"
+l.  Dépuis le menu choisir "Branch > Merge into current branch"
+    et selectioner le branch de travail
+m.  Résoudre les eventuels conflicts! (voir le point 3.)
+n.  Publier ("push") le branch "master"
+o.  Effacer le branch de travail agy-ex-1
+
+NOTE:
+Ne publiez pas vos branches sur le serveur remote
+
+
+-- 3. Résolution des conflicts -------------------------------------------------
+
+TODO!
+
