@@ -1,0 +1,20 @@
+.disable-scroll{
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    /*touch-action: none;*/
+}
+
+.disable-select {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; 	/* iOS Safari */
+    -webkit-user-select: none; 		/* Safari */
+    -khtml-user-select: none; 		/* Konqueror HTML */
+    -moz-user-select: none; 		/* Firefox */
+    -ms-user-select: none; 			/* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.disable-pointer {
+    pointer-events: none;
+}
