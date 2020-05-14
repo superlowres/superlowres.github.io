@@ -47,7 +47,12 @@
 	{
 		"nom" 	        : "Achille Masson",
 		"dossier" 		: "achille/type_generator_2.0",
-		"description"	: "genenerate italic font."
+		"description"	: "type_generator_2"
+	},
+	{
+		"nom" 	        : "Achille Masson",
+		"dossier" 		: "achille/type_generator_3.0",
+		"description"	: "type_generator_3"
 	},
 	{
 		"nom" 	        : "Nathanaël Vianin",
@@ -73,5 +78,15 @@
 		"nom" 	        : "Nathanaël Vianin",
 		"dossier" 		: "nathanael/automata-real-time-infinite-scroll",
 		"description"	: "Smooth Brain but with realtime line drawing"
+	},
+	{
+		"nom" 	        : "Mélanie Fontaine",
+		"dossier" 		: "melanie/ex_7.5",
+		"description"	: "oui oui"
+	},
+	{
+		"nom" 	        : "Elodie Anglade",
+		"dossier" 		: "elodie/day4",
+		"description"	: "InspireMe tool"
 	}
 ]

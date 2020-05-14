@@ -73,19 +73,22 @@ function draw(){
 	}
 }
 
-function floodfill(data, w, h, x, y, col){
+function floodfill(data, w, h, x, y, col,){
 	if (x < 0 || x >= w) return
 	if (y < 0 || y >= h) return
-	const offs = x + y * w
+	const offs = x + y * w 
 	const c = data[offs]
 	if (c[0] == col[0]) return
-	if (Math.abs(c[0] - col[0]) > 60) return
+	if (Math.abs(c[0] - col[0]) > frameCount % 255 ) return
+	if(c[0]< 100) return //frontière
 	data[offs] = col
 	floodfill(data, w, h, x, y-1, col)
 	floodfill(data, w, h, x, y+1, col)
 	floodfill(data, w, h, x-1, y, col)
 	floodfill(data, w, h, x+1, y, col)
 }
+
+
 
 function keyPressed() {
 	if (keyCode == 32) {
