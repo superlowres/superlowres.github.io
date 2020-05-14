@@ -29,20 +29,23 @@ var settingsObject = function () {
   this.cellSize = 1;
   this.cellMargin = 0;
 
-  this.scale = 4;
+  this.scale = 3;
   this.renderScale = 4;
   this.pixelDensity = 1;
   this.autoFit = true;
 
-  this.speed = 2;
+  this.speed = 5;
 
   this.Ascii = true;
   this.asciiW = 64;
   this.asciiH = 64;
   this.asciiScale = 32;
 
-  this.RD = false;
-  this.feedback = false;
+  this.RD = true;
+  this.feedback = true;
+  this.RDfeedback = true;
+  this.fade = 1;
+  this.fadeOffset = 3;
   this.reRender = function () {
     selectRuleSet();
     t = 1;
@@ -161,9 +164,12 @@ function setup() {
   gui.add(settings, "asciiW");
   gui.add(settings, "asciiH");
   gui.add(settings, "asciiScale");
-  gui.add(settings, "renderScale");
+  gui.add(settings, "renderScale", 1, 16);
   gui.add(settings, "autoFit");
   gui.add(settings, "feedback");
+  gui.add(settings, "RDfeedback");
+  gui.add(settings, "fade", 1, 255);
+  gui.add(settings, "fadeOffset", -50, 50);
 
   var e = document.getElementsByClassName("datContainer")[0];
   e.appendChild(gui.domElement);
@@ -248,6 +254,8 @@ function renderAutomata() {
   newTimeStamps[0] = new Array(settings.maxI);
   /*   timeStamps[0].fill(0);
   timeStamps[0][Math.floor(settings.maxI / 2)] = 1; */
+  const fillColor = color(255, 255, 255, 255);
+
   for (var i = 0; i < settings.maxI; i++) {
     if (i == Math.floor(settings.maxI / 2)) {
       newTimeStamps[0][i] = 1;
@@ -261,11 +269,15 @@ function renderAutomata() {
     advTime();
     console.log(t + " out of " + settings.maxI + " iterations done");
   }
-  rectMode(CORNER);
+  buffer.rectMode(CORNER);
+  buffer.noStroke();
+  if (settings.feedback) {
+    fillColor.a = 255 - settings.fade;
+  }
   for (var i = 0; i < timeStamps.length; i++) {
     for (var j = 0; j < timeStamps[i].length; j++) {
       if (timeStamps[i][j] == 0) {
-        buffer.fill(255);
+        buffer.fill(fillColor);
         buffer.rect(
           j * Math.round(settings.scale) + j * settings.cellMargin,
           i * Math.round(settings.scale) + i * settings.cellMargin,
@@ -286,6 +298,9 @@ function draw() {
   frameRate(settings.speed);
 
   if (settings.RD) {
+    if (settings.RDfeedback) {
+      buffer.image(canevas, 0, 0, buffer.width, buffer.height);
+    }
     buffer.filter(BLUR, 1 + settings.d);
     buffer.loadPixels();
     for (var i = 0; i < pixels.length; i += 4) {
@@ -300,20 +315,32 @@ function draw() {
 
   if (settings.Ascii) {
     if (settings.feedback) {
-      background(0);
-      textSize(settings.asciiScale);
-      var ascii_arr = aa.convert(buffer, settings.asciiW, settings.asciiH);
-      if (frameCount < 2) {
-        fill(0);
-      } else {
-        fill(255);
-      }
-      aa.typeArray2d(ascii_arr, this);
+      const faded = 255 - settings.fade;
+      background(0, 0, 0, faded);
     } else {
-      
+      background(0, 0, 0, 255);
     }
+    textSize(settings.asciiScale);
+    var ascii_arr = aa.convert(buffer, settings.asciiW, settings.asciiH);
+    if (frameCount < 2) {
+      fill(0);
+    } else {
+      fill(255);
+    }
+    if (settings.feedback) {
+      image(canevas, settings.fadeOffset, settings.fadeOffset);
+    }
+
+    aa.typeArray2d(ascii_arr, this);
   } else {
-    image(buffer, 0, 0, width, height);
+    if (settings.feedback) {
+      const faded = 255 - settings.fade;
+      background(0, 0, 0, faded);
+      image(buffer, settings.fadeOffset, settings.fadeOffset, width, height);
+      image(buffer, 0, 0, width, height);
+    } else {
+      image(buffer, 0, 0, width, height);
+    }
   }
 }
 

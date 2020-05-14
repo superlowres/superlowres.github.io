@@ -19,8 +19,8 @@ var yMargin;
 var gui;
 var settings;
 var settingsObject = function () {
-  this.diff = 0.5;
-  this.dt = 0.001;
+  this.diff = 0.02;
+  this.dt = 0.09;
 };
 
 var frameCount = 0;
