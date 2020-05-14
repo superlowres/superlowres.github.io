@@ -1,3 +1,5 @@
+/* -- helpers --------------------------- */
+
 .disable-scroll{
     top: 0;
     overflow: hidden;
@@ -18,3 +20,107 @@
 .disable-pointer {
     pointer-events: none;
 }
+
+/* -- mini navigation --------------------------- */
+
+.minimenu{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 2em;
+    width: auto;
+    height: auto;
+    background-color: black;
+    z-index: 10;
+}
+
+
+.minimenu ul {
+    opacity: 0.5;
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+.minimenu li {
+    border-right: 1px solid white;
+    padding: 0.5em;
+    margin:0;
+    float: left;
+    display:block;
+    height:24px;
+}
+
+.minimenu li:first-child{
+    border-left: 1px solid white;
+}
+
+.minimenu canvas{
+    display: inline !important;
+    color: white;
+    text-decoration: none;
+}
+
+.minimenu .nome{
+    line-height: 24px;
+    display: inline-block;
+}
+
+.btn{
+    width:24px;
+    height:24px;
+    display: block;
+    /*background-color: green;*/
+    background-position: center center;
+    background-size: 24px 24px;
+    cursor: pointer;
+}
+
+.btn_next{
+    background-image: url("btn_right.png");
+}
+.btn_next:hover{
+    background-image: url("btn_right_hover.png");
+}
+
+.btn_prev{
+    background-image: url("btn_left.png");
+}
+.btn_prev:hover{
+    background-image: url("btn_left_hover.png");
+}
+
+.btn_home{
+    background-image: url("btn_up.png");
+}
+.btn_home:hover{
+    background-image: url("btn_up_hover.png");
+}
+
+.btn_play{
+    background-image: url("btn_play.png");
+}
+.btn_play:hover{
+    background-image: url("btn_play_hover.png");
+}
+
+ .minimenu .unbreak{
+    display: none;
+ }
+
+@media only screen
+and (max-width : 560px) {
+    .minimenu {
+        right: 0;
+    }
+    .minimenu .break{
+        display:none;
+    }
+    .minimenu .unbreak{
+        display:initial;
+    }
+}
+
+

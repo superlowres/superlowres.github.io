@@ -1,0 +1,47 @@
+[
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_1_SDF",
+		"description"	: "Example SDF."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_2_SDF_smooth",
+		"description"	: "Example SDF avec smooth operation."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_3_lookup",
+		"description"	: "Example d’utilisation d’une image comme lookup."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_4_doom",
+		"description"	: "Doom fire."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_5_doom_gfx",
+		"description"	: "Doom fire avec lookup."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_6_reduction_image",
+		"description"	: "Example avec webcam (et solution à bug P5JS)."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_7_reduction_image_non_square",
+		"description"	: "Example avec webcam (et solution à bug P5JS)."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_8_picking",
+		"description"	: "Conversion des coordonnes en pixels a coord. cell."
+	},
+	{
+		"nom" 	        : "Andreas Gysin",
+		"dossier" 		: "andreas/ex_9_picking_dynamic",
+		"description"	: "Conversion des coordonnes en pixels a coord. cell."
+	}
+]
