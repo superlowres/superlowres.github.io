@@ -56,13 +56,18 @@ function draw(){
   		for (let i=0; i<NUM_X; i++) {
   			const x = i * CELL + ox
   			const y = j * CELL + oy
-  			const offs = ((offscreen.width - 1 - i) * d + j * wd) * 1 // mirror
-  			// const offs = (i * 4 // non mirror
-  			const r = offscreen.pixels[offs  + 13  ]
-  			const g = offscreen.pixels[offs + 122]
-  			const b = offscreen.pixels[offs + 52]
+  			const offs = ((offscreen.width - 1 - i) * d*15 + j/2 * wd) * 4 // mirror
+  			// const offs = ((offscreen.width - 1 - i) * d + j * wd) * 4 // non mirror
+  			const r = offscreen.pixels[offs  + 30  ]
+  			const g = offscreen.pixels[offs + 90]
+  			const b = offscreen.pixels[offs + 100]
   			fill(r, g, b)
+
   			rect(x, y, CELL-1, CELL-1)
+  		//	circle(x, y, mouseX/7)
+				//rect(30, 20, mouseX, mouseY);
+
+  		//	triangle(x, y,mouseX,mouseY, CELL-1, CELL-1)/7
   		}
 	}
 }
