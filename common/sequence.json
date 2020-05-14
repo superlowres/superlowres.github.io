@@ -48,5 +48,30 @@
 		"nom" 	        : "Achille Masson",
 		"dossier" 		: "achille/italic_mode",
 		"description"	: "genenerate italic font."
+	},
+	{
+		"nom" 	        : "Nathanaël Vianin",
+		"dossier" 		: "nathanael/f-solver_buggy",
+		"description"	: "Glitch Fluid"
+	},
+	{
+		"nom" 	        : "Nathanaël Vianin",
+		"dossier" 		: "nathanael/f-solver",
+		"description"	: "Tweakable fluid sim"
+	},
+	{
+		"nom" 	        : "Nathanaël Vianin",
+		"dossier" 		: "nathanael/f-solver-3d",
+		"description"	: "Rutt-Etra-like vizualisation of previous fluidsim"
+	},
+	{
+		"nom" 	        : "Nathanaël Vianin",
+		"dossier" 		: "nathanael/automata-ascii",
+		"description"	: "Smooth Brain: tweakable cellular automata"
+	},
+	{
+		"nom" 	        : "Nathanaël Vianin",
+		"dossier" 		: "nathanael/automata-real-time-infinite-scroll",
+		"description"	: "Smooth Brain but with realtime line drawing"
 	}
 ]
