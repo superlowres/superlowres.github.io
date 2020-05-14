@@ -14,7 +14,13 @@
 	<link rel="apple-touch-icon" href="/common/icon_192.png">
 	<link rel="shortcut icon"    href="/common/icon_32.png">
 	<link rel="stylesheet"       href="/common/common.css" type="text/css"></style>
+	<!-- <style rel="/common/common.css" type="text/css"></style> -->
 	<style type="text/css">
+
+		@font-face {
+			font-family: myFirstFont;
+			src: url(PxGrotesk/PxGrotesk-Screen.otf);
+		}
 		html {
 			height:100vh;
 		}
@@ -22,16 +28,22 @@
 		body{
 			margin:0;
 			padding:0;
-			font-family: Helvetica;
+			font-family: myFirstFont;
+			background: black;
+			overflow-x: hidden;
 		}
 
 		header {
-			background: white;
 
 		}
 		h1{
-			color : black;
+			color : white;
 			text-align: center;
+			font-size: 3em;
+			margin: 0;
+			position: absolute;
+			width:100vw;
+			top: 3vh;
 
 		}
 
@@ -59,14 +71,14 @@
 	<script type="module" src="/common/common.js"></script>
 	<script src="main.js"></script>
 <header>
-	<h1> A or B ?</h1>
+	<h1> Food vs Landscape </h1>
 </header>
 
-<div id= "timerSquare" class="Time">TIMER</div>
 
-<div id= "Achoice" class="A">A</div>
-<div id= "Bchoice" class="B">B</div>
-<div id= "scoreSquare" class="score">SCORE</div>
+<!--
+<div id= "Achoice" class="A"></div>
+<div id= "Bchoice" class="B"></div> -->
+
 
 </body>
 </html>
