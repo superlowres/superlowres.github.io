@@ -34,7 +34,7 @@ const data = [
 	mot2:"H",
 	reponse: 1},
 ]
-
+let score = 0
 let answer = 0
 let level = 0
 
@@ -69,11 +69,12 @@ function setupNiveau(){
 function draw(){
   	background(0)
 
+
   	// Resize proportionel et centree de l’image (de la webcam)
   	// sur le "offscreen"
   	const ch = NUM_Y
   	const cw = Math.floor(img.width / img.height * ch)
-  	offscreen.image(img, (NUM_X-cw)/2, 0, cw, ch)
+  	offscreen.image(img, (NUM_X-cw)/2, 0, cw, ch) //chgm taille
 
 
 		// Preview de l'image:
@@ -98,7 +99,10 @@ function draw(){
 		//const sy = Math.round(map(Math.sin(frameCount * 0.0063), -1, 1, 0, 6))
 		const sy = Math.round(map(frameCount*0.9, 0, height, 0, 6))
 
+		if (frameCount > 1200){
+			frameCount=1200
 
+		}
 		// numero de subdivisons: 1, 2, 4, 8, 16, 32, 64...
 		const subdivisions_x = Math.pow(2, sx)
 		const subdivisions_y = Math.pow(2, sy)
@@ -110,6 +114,7 @@ function draw(){
 	// Affichage final
 	noStroke()
 
+
 	for (let j=0; j<subdivisions_y; j++) {
 			for (let i=0; i<subdivisions_x; i++) {
 					const x = i * cell_w + ox
@@ -120,8 +125,11 @@ function draw(){
 					xnormal = xnormal * wd/2
 					ynormal = ynormal * offscreen.height
 
-					const si = Math.floor(i * NUM_X / subdivisions_x)
+
+					const si = Math.floor(i * NUM_X / subdivisions_x)//si =numx
+					//const si = i*NUM_X//si =numx //lol ca marche pas
 					const sj = Math.floor(j * NUM_Y / subdivisions_y)
+					//const sj = j // lol jarrive pas
 	  			const offs = (si * d + sj * wd) * 4 // non mirror
 					//const offs = (xnormal + ynormal * wd ) *4
 
@@ -134,28 +142,40 @@ function draw(){
 					//triangle(x,y,x+cell_w,y+cell_h,x+cell_w,y)
   		}
 	}
+	fill(255)
+	text(data[level].mot, 100, 100)
+	text(data[level].mot2, width-100, 100)
+	text(score,width/2,height-50)
 }
 function mouseClicked() {
+
+frameCount = 1
 
 
 if(mouseX < windowWidth/2){
 	console.log("gauche")
-	 data[answer].reponse = 1
-	 console.log(data[answer])
+	 if (data[level].reponse == 1){
+		  console.log("right")
+			score++
+
+	 }else{
+		 console.log("false")
+
+	 }
+
 }else{
 	console.log("droite")
-	data[answer].reponse = 2
-	console.log(data[answer])
+	if(data[level].reponse == 2){
+		console.log("right")
+		score++
+	}else{
+	 console.log("false")
+
+
+ 	}
+
 }
-answer ++
-if (answer >= data.length){
-	answer = 0
-}
-if (answer = data[answer].reponse){
-	console.log("right")
-}else{
-	console.log("false")
-}
+console.log("bim",score)
 level ++
 if (level >= data.length){
 	level = 0
