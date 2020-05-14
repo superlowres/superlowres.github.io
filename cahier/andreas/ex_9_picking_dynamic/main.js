@@ -13,7 +13,6 @@ function setup(){
 
 function draw(){
 
-
 	cell_w = map(sin(frameCount*0.011), -1, 1, 10, 40)
 	cell_h = map(sin(frameCount*0.021), -1, 1, 10, 40)
 
@@ -32,22 +31,18 @@ function draw(){
 			const y = j * cell_h + offs_y
 
 			if (i == mouse_cell_x && j == mouse_cell_y) {
-				fill(255,0,0)
+				fill(100, 200, 255)
 			} else {
-				fill(255)
+				noFill()
 			}
+			stroke(0)
 			rect(x, y, cell_w, cell_h)
+			stroke(0, 20)
 			line(x, y, x+cell_w, y+cell_h)
 			line(x+cell_w, y, x, y+cell_h)
 		}
 	}
-
-
-
-
 }
-
-
 
 function windowResized(){
 	resizeCanvas(windowWidth, windowHeight)
