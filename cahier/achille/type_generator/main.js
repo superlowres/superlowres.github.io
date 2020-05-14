@@ -1,5 +1,5 @@
-const NUM_X = 100
-const NUM_Y = 30
+const NUM_X = 32
+const NUM_Y = 32
 const CELL  = 16
 
 const data = new Array(NUM_X * NUM_Y)
@@ -9,13 +9,13 @@ let offscreen
 
 function setup(){
 	createCanvas(windowWidth, windowHeight)
-	pixelDensity(3.0);
+	pixelDensity(5.0);
 	// Le canvas a la meme taille de la grille
 	offscreen = createGraphics(NUM_X, NUM_Y)
 }
 
 function draw(){
-	const ox = (width - NUM_X * CELL) / 2 + CELL/2  // offset de la matrice
+	const ox = (width - NUM_X * CELL) / 3 + CELL/2  // offset de la matrice
 	const oy = (height - NUM_Y * CELL) / 2 + CELL/2
 
 	offscreen.textSize(30)
@@ -30,32 +30,32 @@ function draw(){
 				map(mouseY, oy,(NUM_Y * CELL)+oy,0,NUM_Y),
 				5,5)
 	}
-	offscreen.push()
+	//offscreen.push()
 	offscreen.filter(BLUR, 0.6)
 
 	if (keyIsPressed === true) {
  			offscreen.text(key, NUM_X/2, NUM_Y/2+2)
  	}
-	offscreen.pop()
+	//offscreen.pop()
 
 	for(let j=0; j<NUM_Y; j++) {
 		for(let i=0; i<NUM_X; i++) {
 			const idx = i + j * NUM_X
-			const v = brightness(offscreen.get(i, j)) %20.0
+			const v = brightness(offscreen.get(i, j)) /20.0
 			data[idx] = v
 		}
 	}
 
 	// render
-	//background(220)
+background(220)
 
 	// Preview
 
 	stroke(255)
-	let italic = 0;
+
 	for(let j=0; j<NUM_Y; j++) {
 		for(let i=0; i<NUM_X; i++) {
-			
+
 				const x = i * CELL + ox
 				const y = j * CELL + oy
 				const idx = i + j * NUM_X
@@ -64,6 +64,40 @@ function draw(){
 				rect(x, y, CELL, CELL)
 		}
 	}
+
+	push()
+	translate(CELL*34,0)
+
+	for(let j=0; j<NUM_Y/2; j++) {
+		for(let i=0; i<NUM_X/2; i++) {
+
+				const x = i * CELL + ox
+				const y = j * CELL + oy
+				const idx = (i + j * NUM_X)* 2
+				const v = data[idx]/2
+				fill(v * 255)
+				rect(x, y, CELL, CELL)
+		}
+	}
+
+	pop()
+
+	push()
+	translate(CELL*34,CELL*18)
+
+	for(let j=0; j<NUM_Y/4; j++) {
+		for(let i=0; i<NUM_X/4; i++) {
+
+				const x = i * CELL + ox
+				const y = j * CELL + oy
+				const idx = (i + j * NUM_X)* 4
+				const v = data[idx]/4
+				fill(v * 255)
+				rect(x, y, CELL, CELL)
+		}
+	}
+
+	pop()
 }
 
 function windowResized(){
