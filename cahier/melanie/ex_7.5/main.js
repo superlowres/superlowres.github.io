@@ -6,20 +6,20 @@ const TRIANGLE_W =  15
 
 const data = [
 	{image: "imgs_0.jpg",
-	mot: "A",
-	mot2:"B",
-	reponse: 1},
+	mot: "Food",
+	mot2:"Landscape",
+	reponse: 0},
 	{image: "imgs_1.jpg",
-	mot: "C",
-	mot2:"D",
+	mot: "Food",
+	mot2:"Landscape",
 	reponse: 2},
 	{image: "imgs_2.jpg",
-	mot: "E",
-	mot2:"F",
+	mot: "Food",
+	mot2:"Landscape",
 	reponse: 2},
 	{image: "imgs_3.jpg",
-	mot: "A",
-	mot2:"B",
+	mot: "Food",
+	mot2:"Landscape",
 	reponse: 1},
 	{image: "imgs_4.jpg",
 	mot: "C",
@@ -47,6 +47,8 @@ let imgChange
 
 function preload (){
 
+	  myFont = loadFont('assets/inconsolata.otf');
+
 }
 
 function setup(){
@@ -60,8 +62,8 @@ function setup(){
 function setupNiveau(){
 	console.log(level)
 	img= loadImage(data[level].image)
-	document.getElementById('Achoice').innerHTML = data[level].mot
-	document.getElementById('Bchoice').innerHTML = data[level].mot2
+	// document.getElementById('Achoice').innerHTML = data[level].mot
+	// document.getElementById('Bchoice').innerHTML = data[level].mot2
 
 }
 
@@ -103,6 +105,7 @@ function draw(){
 			frameCount=1200
 
 		}
+		console.log(frameCount)
 		// numero de subdivisons: 1, 2, 4, 8, 16, 32, 64...
 		const subdivisions_x = Math.pow(2, sx)
 		const subdivisions_y = Math.pow(2, sy)
@@ -138,13 +141,14 @@ function draw(){
 	  			const b = offscreen.pixels[offs + 2]
 	  			fill(r, g, b)
 					//ellipse(x,y,cell_w-1, cell_h-1)
-	  			rect(x, y, cell_w-1, cell_h-1)
+	  			rect(x, y, cell_w+1, cell_h+1)
 					//triangle(x,y,x+cell_w,y+cell_h,x+cell_w,y)
   		}
 	}
 	fill(255)
-	text(data[level].mot, 100, 100)
-	text(data[level].mot2, width-100, 100)
+	textSize(30)
+	text(data[level].mot, 100, height/2)
+	text(data[level].mot2, width-300, height/2)
 	text(score,width/2,height-50)
 }
 function mouseClicked() {
