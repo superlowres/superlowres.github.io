@@ -75,26 +75,24 @@
 
 /* CUSTOM DAT.GUI */
 
-
-
-  .dg.a {
-      margin-right: 0 !important;
-  }
+.dg.a {
+    margin-right: 0 !important;
+}
 
 .dg .main .a {
     background: black !important;
 }
 
 .dg.main.taller-than-window .close-button {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ddd !important;
 }
 
 .dg.main .close-button {
-    background-color: #ccc;
+    background-color: #ccc !important;
 }
  
 .dg.main .close-button:hover {
-    background-color: #ddd;
+    background-color: #ddd !important;
 }
 
 .dg {
@@ -103,19 +101,19 @@
 }
 
 .dg.main::-webkit-scrollbar {
-    background: #fafafa;
+    background: #fafafa !important;
 }
 
 .dg .c .slider:hover .slider-fg{    
-    background: white;
+    background: white !important;
 }
 .dg.main::-webkit-scrollbar-thumb {
-    background: #bbb;
+    background: #bbb !important;
 }
  
 .dg li:not(.folder) {
-    background: #030303;
-    border-bottom: 1px solid #ddd;
+    background: #030303 !important;
+    border-bottom: 1px solid #ddd !important;
 }
  
 .dg li.save-row .button {
@@ -126,42 +124,42 @@
 }
 
 .dg .cr.function:hover,.dg .cr.boolean:hover {
-    background: black;
+    background: black !important;
 }
  
 .dg .c input[type=text] {
-    background:black;
+    background:black !important;
 }
  
 .dg .c input[type=text]:hover {
-    background:black;
+    background:black !important;
 }
  
 .dg .c input[type=text]:focus {
-    background: #eee;
-    color: #555;
+    background: #eee !important;
+    color: #555 !important;
 }
  
 .dg .c .slider {
-    background: #e9e9e9;
+    background: #e9e9e9 !important;
 }
 
 .dg .c .slider:hover {
-    background: #eee;
+    background: #eee !important;
 }
 
 .dg .c .slider-fg {
-    background: white;
+    background: white !important;
 }
 
 .dg .c .slider {
-    background:black;
-    border: solid 0.2px;
-    border-color: white;
+    background:black !important;
+    border: solid 0.2px !important;
+    border-color: white !important;
 }
 
 .dg .cr.number, .dg .cr.function {
-    border-left:none;
+    border-left:none !important;
 }
 
 .dg .cr.number input[type=text] {
