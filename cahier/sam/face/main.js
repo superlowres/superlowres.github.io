@@ -18,13 +18,7 @@ function setup(){
     capture   = createCapture(VIDEO)
     capture.hide()
     let sub = 500
-    button = createButton("SAVE");
- button.position(200, 200)
- button.position(width/2-50,30)
- button.mousePressed(saveToFile);
- button.style("font-family", "Sans Serif");
-  button.style("font-size", "40px");
-  button.style("color","black");
+
 
 }
 
@@ -36,7 +30,7 @@ function draw(){
     // sur le "offscreen"
     const ch = NUM_Y
     const cw = Math.floor(capture.width / capture.height * ch)
-    offscreen.image(capture, (NUM_X-cw)/2, 0, cw, ch)
+  //  offscreen.image(capture, (NUM_X-cw)/2, 0, cw, ch)
 
     // Preview de l'image:
     //image(offscreen, 0, 0)
