@@ -3,8 +3,8 @@
  */
 
 
-let NUM_X = 64
-let NUM_Y = 64
+let NUM_X = 48
+let NUM_Y = 80
 let CELL  = 10
 
 let capture, offscreen
@@ -98,7 +98,8 @@ function draw(){
 }
 
 function keyPressed() {
-  if (key == 's') {
+  if (keyCode == 32) {
+
     let ox = (width - NUM_X * CELL) / 2
     let oy = (height - NUM_Y * CELL) / 2
     let cell_w = NUM_X * CELL
