@@ -47,7 +47,7 @@ let imgChange
 
 function preload (){
 
-	  myFont = loadFont('assets/inconsolata.otf');
+	  myFont = loadFont('PxGrotesk/PxGrotesk-Screen.otf');
 
 }
 
@@ -147,6 +147,7 @@ function draw(){
 	}
 	fill(255)
 	textSize(30)
+	textFont(myFont);
 	text(data[level].mot, 100, height/2)
 	text(data[level].mot2, width-300, height/2)
 	text(score,width/2,height-50)
