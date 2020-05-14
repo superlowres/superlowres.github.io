@@ -47,7 +47,12 @@
 	{
 		"nom" 	        : "Achille Masson",
 		"dossier" 		: "achille/type_generator_2.0",
-		"description"	: "genenerate italic font."
+		"description"	: "type_generator_2"
+	},
+	{
+		"nom" 	        : "Achille Masson",
+		"dossier" 		: "achille/type_generator_3.0",
+		"description"	: "type_generator_3"
 	},
 	{
 		"nom" 	        : "Nathanaël Vianin",
