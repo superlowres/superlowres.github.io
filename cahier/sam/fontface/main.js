@@ -12,11 +12,12 @@ let sub
 let button
 let img
 let font
-
+let filter
 let lettre = []
 
 function preload(){
   font = loadFont('fonts/NeueHaasGrotesk-Roman.otf');
+  filter = loadImage('img/filter.svg');
 
 }
 function setup(){
@@ -25,26 +26,28 @@ function setup(){
     capture   = createCapture(VIDEO)
     capture.hide()
     let sub = 500
+    frameRate(25)
 
 
 }
 
 function draw(){
-  pixelDensity(0.8)
+  //pixelDensity(0.2)
 
-    background(0)
+    background(255)
     let img = capture.get();
     textFont(font)
     textSize(110);
-    fill(0)
+    fill(255)
 
 
     let xoffset = 0
-    let yoffset = 140
+    let yoffset = 120
     let offsetimg = 0
    for (var i = 0; i < lettre.length; i++) {
      if (lettre[i] == 0) {
 
+       image(filter, width, height);
 
         copy(img, mouseX/3,mouseY/2, 70, 70, xoffset, yoffset, 120, 120); //haut droite
         xoffset = xoffset + 120
@@ -62,6 +65,8 @@ function draw(){
         translate(-90,90)
         text('o', xoffset, yoffset);
         pop()
+
+
 
       }  if (lettre[i] == 2) {
 
@@ -83,7 +88,25 @@ function draw(){
 
       } if (lettre[i] == 4) {
 
+
+
+
+
+
+
+        copy(img, mouseX/4,mouseY/4, 70, 70, xoffset, yoffset, 120, 120); //haut droite
         xoffset = xoffset + 120
+
+
+
+        push()
+        noStroke();
+        translate(-120,0)
+      //  ellipse(xoffset,yoffset,120,120)
+        image(filter,xoffset,yoffset,120,120)
+
+        pop()
+
 
       } if (lettre[i] == 5) {
 
@@ -236,9 +259,7 @@ function keyPressed() {
   if (key === 'r') {
     lettre.push(6)
   }
-  if (key === 'o') {
-    lettre.push(8)
-  }
+
   if (key === 'u') {
     lettre.push(9)
   }
