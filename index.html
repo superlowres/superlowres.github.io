@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Super Low Rez</title>
+        <meta name="description"                           content="Super Low Resolution workshop, ECAL 2020 ">
+        <meta name="author"                                content="ECAL MID1">
+        <meta name="viewport"                              content="width=device-width, initial-scale=1">
+        <meta name="mobile-web-app-capable"                content="yes">
+        <meta name="apple-mobile-web-app-capable"          content="yes">
+        <meta name="theme-color"                           content="black"> <!-- Chrome, Firefox OS and Opera -->
+        <meta name="msapplication-navbutton-color"         content="black"> <!-- Windows Phone -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- iOS Safari -->
+        <link rel="apple-touch-icon" sizes="192x192" href="icons/icon_192.png">
+        <link rel="shortcut icon"    sizes="32x32"   href="icons/icon_32.png">
+        <style type="text/css">
+
+            html {
+              box-sizing: border-box;
+            }
+            *, *:before, *:after {
+              box-sizing: inherit;
+            }
+
+            body {
+                background-color: white;
+                font-family: Helvetica, Arial, sans-serif;
+            }
+
+            a{
+                text-decoration: none;
+                color:blue;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+
+            #output {
+            }
+        </style>
+    </head>
+    <body>
+        <h4>Super Low Resolution</h4>
+        <ul id="output"></ul>
+
+        <script type="text/javascript">
+
+            fetch("common/sequence.json").then(function(res){
+                return res.json()
+            }).then(function(json){
+                render(json)
+            })
+
+            function render(data){
+                const parent = document.querySelector("#output")
+                parent.innerHTML = ""
+
+                const BASE_FOLDER = "cahier"
+                for (let i=0; i<data.length; i++) {
+
+                    const el = document.createElement("li")
+                    const v = localStorage.getItem(data[i].dossier) == 1 ? " " : "*"
+
+                    const url = BASE_FOLDER + "/" + data[i].dossier
+                    el.innerHTML += "<a href=" + url + ">" + url + "</a>"
+                    parent.appendChild(el)
+                }
+            }
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
