@@ -89,9 +89,9 @@
 		"dossier" 		: "elodie/day4",
 		"description"	: "InspireMe tool"
 	},
-    {
-        "nom"             : "Lily Rose Hold",
-        "dossier"         : "lily/ex_8_lowhigh",
-        "description"    : "i am so low I got high"
-    },
+  {
+      "nom"             : "Lily Rose Hold",
+      "dossier"         : "lily/ex_8_lowhigh",
+      "description"    : "i am so low I got high"
+  }
 ]
