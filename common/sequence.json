@@ -43,5 +43,10 @@
 		"nom" 	        : "Andreas Gysin",
 		"dossier" 		: "andreas/ex_9_picking_dynamic",
 		"description"	: "Conversion des coordonnes en pixels a coord. cell."
+	},
+	{
+		"nom" 	        : "Achille Masson",
+		"dossier" 		: "achille/italic_mode",
+		"description"	: "genenerate italic font."
 	}
 ]
