@@ -21,20 +21,36 @@
 		body{
 			margin:0;
 			padding:0;
+            overflow-x: hidden;
 		}
 		canvas {
 			display:block;
 			width:100vw;
 			height:100vh;
+            transform: rotate(180deg);
+            z-index: 0;
+            position: relative;
 		}
+        
+        .content{
+            position: absolute;
+            top: 90vh;
+            left: 5vw;
+            height: 100vh;
+            width: 90vw;
+            z-index: 999;
+            border: solid 1px black; 
+            margin-bottom: 5vw;
+        }
 	</style>
 </head>
 
-<body class="disable-select disable-scroll">
+<body>
+    <div class="content">
+    <p> SHEMA</p>
+    </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
 	<script type="module" src="/common/common.js"></script>
 	<script src="main.js"></script>
-	<script src="mitosis.js"></script>
-	<script src="App.js"></script>
 </body>
 </html>
