@@ -75,6 +75,8 @@
 
 /* CUSTOM DAT.GUI */
 
+
+
   .dg.a {
       margin-right: 0 !important;
   }
@@ -104,6 +106,9 @@
     background: #fafafa;
 }
 
+.dg .c .slider:hover .slider-fg{    
+    background: white;
+}
 .dg.main::-webkit-scrollbar-thumb {
     background: #bbb;
 }
@@ -116,7 +121,9 @@
 .dg li.save-row .button {
     text-shadow: none !important;
 }
-
+.dg .c .slider:hover{
+    background: black !important;
+}
 
 .dg .cr.function:hover,.dg .cr.boolean:hover {
     background: black;
