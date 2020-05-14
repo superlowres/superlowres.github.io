@@ -83,5 +83,10 @@
 		"nom" 	        : "Mélanie Fontaine",
 		"dossier" 		: "melanie/ex_7.5",
 		"description"	: "oui oui"
+	},
+	{
+		"nom" 	        : "Elodie Anglade",
+		"dossier" 		: "elodie/day4",
+		"description"	: "InspireMe tool"
 	}
 ]
