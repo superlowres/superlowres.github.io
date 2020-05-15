@@ -10,6 +10,11 @@
         "description": "type_generator_3"
     },
     {
+        "nom": "Achille Masson",
+        "dossier": "achille/superlowres_font",
+        "description": "superlowres_font"
+    },
+    {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/f-solver_buggy",
         "description": "Glitch Fluid."
