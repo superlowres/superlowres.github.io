@@ -168,5 +168,11 @@
         "nom": "Andreas Gysin",
         "dossier": "andreas/ex_10_proportional",
         "description": "Matrice 'responsive'."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/fontfface",
+        "description": "alphabettest."
     }
+
 ]
