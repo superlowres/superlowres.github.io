@@ -14,7 +14,7 @@ let datadraw
 let currentColor = 0;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight)
+	mycanvas = createCanvas(windowWidth, windowHeight)
 	offscreen = createGraphics(num_x, num_y)   //ptite image en haut    //  0 1 2
 	data = new Array(num_x * num_y).fill([0, 0, 0]) // [r,g,b] //new tableau donnant num x et y
 	datadraw = new Array(num_x * num_y).fill([0, 0, 0])
@@ -82,18 +82,18 @@ function draw() {
 		for (let i = 0; i < num_x; i++) {
 			const x = i * cell_w + ox
 			const y = j * cell_h + oy
-			const couleur = datadraw [i + j * num_x]
+			const couleur = datadraw[i + j * num_x]
 			const r = couleur[0]
 			const g = couleur[1]
 			const b = couleur[2]
-			if(r == 0 && g == 0 && b == 0) {
+			if (r == 0 && g == 0 && b == 0) {
 
 			}
 			else {
 				fill(r, g, b)
 				rect(x, y, cell_w, cell_h)
 			}
-			
+
 		}
 	}
 }
@@ -114,10 +114,16 @@ function floodfill(data, w, h, x, y, col) {
 }
 
 
+//add: -condition qui remet tout à 0
+//	   -keypressed pour enregistrer 
 
-function keyPressed() {  
+function keyPressed() {
 	if (keyCode == 32) {
 		pause = !pause
+	}
+	if (keyCode === 38) {
+		
+		saveCanvas(mycanvas, "mypuzzle", "png")
 	}
 }
 
@@ -131,17 +137,18 @@ function mousePressed(event) {
 
 			if (c2[0] == data[i + j * num_x][0] &&
 				c2[1] == data[i + j * num_x][1] &&
-				c2[2] == data[i + j * num_x][2]) { 
+				c2[2] == data[i + j * num_x][2]) {
 
-				datadraw [i + j * num_x ] = [c2[0],c2[1],c2[2]]
+				datadraw[i + j * num_x] = [c2[0], c2[1], c2[2]]
 
 
 			}
 		}
 
 	}
+
 	currentColor++;
-	if(currentColor >= coulpose.length) currentColor = 0;
+	if (currentColor >= coulpose.length) currentColor = 0;
 }
 
 function windowResized() {
