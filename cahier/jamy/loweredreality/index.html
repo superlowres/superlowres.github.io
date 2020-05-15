@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" id='html'>
+<head>
+	<meta charset="utf-8">
+	<title>P5JS canvas</title>
+	<meta name="description" 							content="P5JS canvas template">
+	<meta name="author"                       			content="Andreas">
+	<meta name="viewport" 								content="width=device-width,initial-scale=1">
+	<meta name="mobile-web-app-capable" 				content="yes">
+	<meta name="apple-mobile-web-app-capable" 			content="yes">
+	<meta name="theme-color" 							content="black">
+	<meta name="msapplication-navbutton-color" 			content="black">
+	<meta name="apple-mobile-web-app-status-bar-style" 	content="black">
+	<link rel="apple-touch-icon" href="/common/icon_192.png">
+	<link rel="shortcut icon"    href="/common/icon_32.png">
+    <link rel="icon" href="assets/gif.gif" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet"       href="/common/common.css" type="text/css"></style>
+	
+	<style type="text/css">
+		html {
+			height:100vh;
+		}
+		body{
+			margin:0;
+			padding:0;
+            overflow-x: hidden;
+		}
+		canvas {
+			display:block;
+			width:100vw;
+			height:100vh;
+            transform: rotate(180deg);
+            z-index: 0;
+            position: relative;
+		}
+        
+        .content{
+            position: absolute;
+            top: 90vh;
+            left: 5vw;
+            height: 100vh;
+            width: 90vw;
+            z-index: 999;
+            border: solid 1px black; 
+            margin-bottom: 5vw;
+        }
+        
+        #image{
+            position: absolute;
+            z-index: 0;
+            width: 100vw;
+            min-height: 100vh;
+            background: url("assets/vr.png") no-repeat center center fixed;
+             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            pointer-events: none;
+        }
+        .info{
+            font-size: 0.7em;
+            position: absolute;
+            z-index: 999;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        
+        .info01{
+           left: 20px;
+            top:25px;
+        }
+        .info02{
+           left: 170px;
+            top:25px;
+        }
+        .info03{
+           left: 320px;
+            top:25px;
+        }
+        
+        .info04{
+           left: 470px;
+            top:25px;
+        }
+	</style>
+</head>
+
+<body>
+    <div id="image"></div>
+    <div class="info info01">eye space</div>
+    <div class="info info02">resolution</div>
+    <div class="info info03">zoom</div>
+    <div class="info info04">mirror</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
+	<script type="module" src="/common/common.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
