@@ -142,5 +142,10 @@
         "nom": "Iris Moine",
         "dossier": "iris/iris_musique_4",
         "description": "interactive_installation"
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/04_divide-sliders",
+        "description": "générateur de pattern textiles."
     }
 ]
