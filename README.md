@@ -1,6 +1,10 @@
-# superlowres.github.io
-Super Low Resolution workshop,  
-ECAL 2020
+# Super Low Resolution  
+un workshop en LowDPI  
+ECAL  
+Printemps 2020  
+
+Live:  
+[superlowr.es](superlowr.es)
 
 Avec:  
 Achille Masson  
