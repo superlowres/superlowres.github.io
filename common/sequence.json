@@ -126,7 +126,12 @@
     {
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_5-sdf-layering",
-        "description": "SDF calques multtiples"
+        "description": "SDF calques multiples"
+    },
+    {
+        "nom": "Loris Briguet",
+        "dossier": "loris/ex-9_6-sdf-multi-sketch",
+        "description": "SDF repertoire de sketch"
     },
     {
         "nom": "Salome Dotter",
