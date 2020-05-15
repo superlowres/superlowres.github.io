@@ -37,7 +37,7 @@
 	<div id="mySidebar" class="sidebar">
 		<h1>Lacking inspiration?</h1>
 		<p>InspireMe is a creative tool that allows you to create a super-low-resolution design. This tool acts as clouds in the sky: sometimes, when you look at them closely, you'll start seeing things. The aim of this tool is to inspire you in a creative way!</p>
-		<div id="examples_container" class="invisible">
+		<div id="grid" class="invisible">
 			<div class="img_container"><img src ="imgs/example_1.gif"></div>
 			<div class="img_container"><img src ="imgs/example_2.gif"></div>
 			<div class="img_container"><img src ="imgs/example_3.gif"></div>
@@ -47,7 +47,7 @@
 			<div class="img_container"><img src ="imgs/example_7.gif"></div>
 			<div class="img_container"><img src ="imgs/example_8.gif"></div>
 			<div class="img_container"><img src ="imgs/example_9.gif"></div>
-			<div class="img_container"><img src ="imgs/example_2.gif"></div>
+			<div class="img_container"><img src ="imgs/example_10.gif"></div>
 		</div>
 		<a id="myToggle" onclick="toggleSidebar()">See examples</a>
 		
@@ -70,7 +70,7 @@
 		document.getElementById("mySidebar").style.width = "100vw";
 		document.getElementById("mySidebar").style.height = "100vh";
 		document.getElementById("myToggle").innerText = "Back to tool";
-		document.getElementById("examples_container").classList.remove("invisible");
+		document.getElementById("grid").classList.remove("invisible");
 		document.getElementById("mySidebar").style.zIndex = "15";
 	
 		
@@ -81,7 +81,7 @@
 		document.getElementById("mySidebar").style.width = "265px";
 		document.getElementById("mySidebar").style.height = "100vh";
 		document.getElementById("myToggle").innerText = "See examples";
-		document.getElementById("examples_container").classList.add("invisible");
+		document.getElementById("grid").classList.add("invisible");
 		document.getElementById("mySidebar").style.zIndex = "1";
 		
 		
