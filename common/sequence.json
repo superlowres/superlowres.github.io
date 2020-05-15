@@ -115,6 +115,21 @@
         "description": "Division souris."
     },
     {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/qrcode",
+        "description": "Générateur aléatoire de QRcode."
+    },
+        {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/codebar",
+        "description": "Générateur aléatoire de code-bar."
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/loweredreality",
+        "description": "Réalité diminuée en basse résolution."
+    },
+    {
         "nom": "Soraya Camina",
         "dossier": "soraya/04_divide-sliders",
         "description": "Générateur de pattern dans le but d'en créer des textiles."
