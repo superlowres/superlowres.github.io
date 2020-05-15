@@ -14,14 +14,8 @@ let randomV = [];
 let randomV1 = [];
 const gap = 8;
 
-let chooseDoc = [ v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31 ];
-const SLIT = {
-  timeline : 0
-};
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  GUI.add(SLIT, 'timeline', SLIT.timeline).min(0).max(11).step(1
   for (i = 0; i < NUM_X; i += gap) {
     randomV[i] = round(random(-10, 10));
     randomV1[i] = round(random(0, 10));
@@ -34,7 +28,6 @@ function draw() {
   background(220);
   grid1();
   // let app = SLIT.app;
-  chooseDoc[SLIT.timeline]();
 }
 
 function grid1() {
