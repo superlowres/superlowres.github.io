@@ -1,3 +1,7 @@
+body{
+    position:relative;
+}
+
 .sidebar {
     height: 100vh;
     width: 265px;
@@ -17,6 +21,7 @@
   }
 
   h1{
+    padding-top:10vh;
     white-space: nowrap;
     color: white;
     font-family: helvetica, sans-serif;
@@ -26,8 +31,11 @@
   }
 
   .sidebar p, .sidebar h1, .sidebar a {
+      
     padding-left: 8%;
     padding-right: 8%;
+      margin-top: 0;
+    margin-bottom: 0;
   }
   
   .sidebar a {
@@ -68,25 +76,46 @@
     align-content: space-between;
 }
 
-#examples_container .img_container{
-    width: 16vw;
-    height: 16vw;
+#grid{
+    padding-left: 8%;
+    padding-right: 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
 }
-#examples_container .img_container img{
+
+#grid > div {
+    background: black;
+    /* padding: 1rem; */
+    display: grid;
+  }
+  
+  #grid > div::before {
+    content: "";
+    padding-bottom: 100%;
+    display: block;
+  }
+  
+  #grid > div::before, #grid > div > img{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#grid > div > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    overflow: hidden;
-}
+  }
 
 #my-gui-container{
-    padding-left: 8%;
-    position: absolute;
-    bottom:200px;
+    position: fixed;
+    z-index: 10;
     right:0;
-  z-index: 10;
+    bottom: 40px;
 }
 
+#myToggle {
+    margin-top: 10px;
+}
 /* CUSTOM DAT.GUI */
 
 .dg.a {

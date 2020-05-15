@@ -2,14 +2,28 @@
  * 	Reduction d'une image
  */
 
+//  const GUI = new dat.GUI();
 
-const NUM_X = 30
-const NUM_Y = 30
-const CELL  = 20
+// let GRID = {
+// NUM_X = 30
+// NUM_Y = 30
+// CELL  = 20
+// }
+
+let NUM_X = 30
+let NUM_Y = 30
+let CELL  = 20
+
+
 
 let capture, offscreen
 
 function setup(){
+
+	// GUI.add(GRID, 'NUM_X', NUM_X).min(1).max(80).step(1);
+	// GUI.add(GRID, 'NUM_Y', NUM_Y).min(1).max(50).step(1);
+	// GUI.add(GRID, 'CELL', CELL).min(1).max(32).step(1);
+
 	createCanvas(windowWidth, windowHeight)
   	capture   = createCapture(VIDEO)
   	offscreen = createGraphics(NUM_X, NUM_Y)
