@@ -24,7 +24,6 @@
 
             body {
                 background-color: white;
-                font-family: monospace, monospace;
                 margin:3em;
             }
 
@@ -32,26 +31,27 @@
                 text-decoration: none;
                 color:blue;
             }
+
+
             a:hover{
                 text-decoration: underline;
             }
 
-            #output {
-            }
-            li{
-            	padding-bottom: 0.5em;
+            pre {
+                font-family: 'Courier New', Courier, monospace;
             }
         </style>
     </head>
     <body>
 
 <pre id="output">
-                    Super Low Resolution
-                    un workshop en LowDPI
-                    ECAL
-                    Printemps 2020
+                  Super Low Resolution
 
-                    <a href="https://github.com/superlowres/superlowres.github.io">→ code repository</a>
+                  un workshop en LowDPI
+                  ECAL
+                  Printemps 2020
+
+                  <a href="https://github.com/superlowres/superlowres.github.io">→  code repository</a>
 </pre>
 
         <script type="text/javascript">
@@ -66,16 +66,18 @@
                 const parent = document.querySelector("#output")
 
                 const BASE_FOLDER = "cahier"
-                let nom = ""
-                let out = "<br>"
-                const tab_size = 20
+                const tab_size   = 18
                 const ruler_size = 80
+
+                let nom = ""
+                let out = ""
                 for (let i=0; i<data.length; i++) {
 
                     const visited = localStorage.getItem(data[i].dossier) == 1 ? " " : "*"
                     const url = BASE_FOLDER + "/" + data[i].dossier
 
                     if (nom != data[i].nom) {
+                        out += "<br>"
                         out += "".padEnd(ruler_size, "-") + "<br>"
                         out += data[i].nom.padEnd(tab_size, " ")
                         nom = data[i].nom
@@ -84,7 +86,7 @@
                     }
                     out += data[i].description + "<br>"
 
-                    out += "".padEnd(tab_size, " ") + "<a href=" + url + ">→ " + url + "</a><br>"
+                    out += "".padEnd(tab_size, " ") + "<a href=" + url + ">→  " + url + "</a><br>"
                 }
                 parent.innerHTML += out
             }
