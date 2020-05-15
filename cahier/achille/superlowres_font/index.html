@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta name="description" 							content="P5JS canvas template">
+	<meta charset="utf-8">
+	<title>P5JS canvas</title>
+	<meta name="description" 							content="P5JS canvas template">
 	<meta name="author"                       			content="Andreas">
 	<meta name="viewport" 								content="width=device-width,initial-scale=1">
 	<meta name="mobile-web-app-capable" 				content="yes">
@@ -11,13 +13,9 @@
 	<meta name="apple-mobile-web-app-status-bar-style" 	content="black">
 	<link rel="apple-touch-icon" href="/common/icon_192.png">
 	<link rel="shortcut icon"    href="/common/icon_32.png">
-	<style rel="stylesheet" href="/common/common.css" type="text/css"></style>
+	<link rel="stylesheet"       href="/common/common.css" type="text/css"></style>
+  <link rel="stylesheet"       href="style/style_f.css" type="text/css"></style>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel='stylesheet' href='style/bootstrap.min.css'>
-  <link rel="stylesheet" href="style/style_f.css">
-  <link rel='stylesheet' href='style/fullPage.css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <style type="text/css">
 
 		html {
@@ -78,8 +76,10 @@ input::-moz-range-thumb {
 }
 	</style>
 </head>
-<body>
-
+<body class="disable-select disable-scroll">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script type="module" src="/common/common.js"></script>
+  <script src="main.js"></script>
 <div id="fullpage">
     <div class="section" data-anchor="slide0">
       <div class="container-fluid">
@@ -242,9 +242,6 @@ input::-moz-range-thumb {
 
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-<script type="module" src="/common/common.js"></script>
-
 
 <!-- Script -->
 <script src="script/fullpage.js"></script>
@@ -269,7 +266,7 @@ input::-moz-range-thumb {
     }
 
 </script>
-<script src="main.js"></script>
+
 
 </body>
 </html>
