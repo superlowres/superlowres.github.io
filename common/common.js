@@ -4,6 +4,7 @@
  *  1. écrit quelque default (touchmove)
  *  2. injecte micro navigation
  *  3. injecte bouton audio
+ *  4. auto redirect https
  */
 
 // 1. Eject depuis un iframe, si jamais ---------------------------------------
@@ -157,4 +158,11 @@ function run() {
             ctx.restore()
         }
     }
+}
+
+// * 4. auto redirect https
+
+var host = "superlowr.es"
+if (window.location.host == host && window.location.protocol != "https:") {
+    window.location.protocol = "https:"
 }
