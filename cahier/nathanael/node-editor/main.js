@@ -28,12 +28,14 @@
  */
 document.querySelector("#load").onchange = Load();
 
+
 const NodeTypes = [
     "testNode"
 ]
 
 var nodeBrowser;
 var topBar;
+var cssDone = false;
 
 var viewPortSize;
 
@@ -56,9 +58,23 @@ var link2;
 var previewingInBackground = false;
 var previewedNode;
 
-function preload() {}
+function preload() {
+
+}
+
+function cssModifier() {
+    if (false) {
+        document.getElementsByClassName("minimenu")[0].style.left = "5px";
+        document.getElementsByClassName("minimenu")[0].style.width = "600px";
+        document.getElementsByClassName("minimenu")[0].top = "-5px";
+        document.getElementsByClassName("minimenu")[0].style.transform = "scale(.8)";
+        cssDone = true;
+    }
+    cssDone = true;
+}
 
 function setup() {
+
     createCanvas(window.innerWidth, window.innerHeight);
     this.doubleClicked();
     rectMode(CORNERS);
@@ -79,6 +95,10 @@ function draw() {
     drawNodes();
 
     linkingBehaviour();
+
+    if (!cssDone) {
+        cssModifier();
+    }
 
     nodeBrowser.update();
     topBar.update();
