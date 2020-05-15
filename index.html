@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Super Low Rez</title>
-        <meta name="description"                           content="Super Low Resolution workshop, ECAL 2020 ">
+        <title>Super Low Resolution</title>
+        <meta name="description"                           content="A workshop in LowDPI, ECAL 2020">
         <meta name="author"                                content="ECAL MID1">
         <meta name="viewport"                              content="width=device-width, initial-scale=1">
         <meta name="mobile-web-app-capable"                content="yes">
@@ -24,7 +24,7 @@
 
             body {
                 background-color: white;
-                font-family: Helvetica, Arial, sans-serif;
+                font-family: monospace, monospace;
                 margin:3em;
             }
 
@@ -44,8 +44,15 @@
         </style>
     </head>
     <body>
-        <h4>Super Low Resolution</h4>
-        <ul id="output"></ul>
+
+<pre id="output">
+                    Super Low Resolution
+                    a workshop in LowDPI
+                    ECAL
+                    Spring, 2020
+
+                    <a href="https://github.com/superlowres/superlowres.github.io">→ code repository</a>
+</pre>
 
         <script type="text/javascript">
 
@@ -57,44 +64,32 @@
 
             function render(data){
                 const parent = document.querySelector("#output")
-                parent.innerHTML = ""
 
                 const BASE_FOLDER = "cahier"
+                let nom = ""
+                let out = "<br>"
+                const tab_size = 20
+                const ruler_size = 80
                 for (let i=0; i<data.length; i++) {
 
-                    const el = document.createElement("li")
-                    const v = localStorage.getItem(data[i].dossier) == 1 ? " " : "*"
-
+                    const visited = localStorage.getItem(data[i].dossier) == 1 ? " " : "*"
                     const url = BASE_FOLDER + "/" + data[i].dossier
-                    el.innerHTML += "<span>" + data[i].description + "</span><br>"
-                    el.innerHTML += "<a href=" + url + ">" + url + "</a><br>"
-                    parent.appendChild(el)
+
+                    if (nom != data[i].nom) {
+                        out += "".padEnd(ruler_size, "-") + "<br>"
+                        out += data[i].nom.padEnd(tab_size, " ")
+                        nom = data[i].nom
+                    } else {
+                        out += "".padEnd(tab_size, " ")
+                    }
+                    out += data[i].description + "<br>"
+
+                    out += "".padEnd(tab_size, " ") + "<a href=" + url + ">→ " + url + "</a><br>"
                 }
+                parent.innerHTML += out
             }
 
         </script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
