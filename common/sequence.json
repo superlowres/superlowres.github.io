@@ -238,6 +238,11 @@
         "nom": "Martial Grin",
         "dossier": "martial/main",
         "description": "Timeline d'expérimentations formelles."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/grid",
+        "description": "Mise en valeurs des projets avec des grilles."
     }
 
 ]
