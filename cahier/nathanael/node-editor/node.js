@@ -11,7 +11,7 @@ class Node {
         this.Outs = [];
 
         this.running = true;
-        this.Shader = createGraphics(SETTINGS.ShaderRes, SETTINGS.ShaderRes);
+        this.Shader = createGraphics(ShaderRes, ShaderRes);
         this.Worker = null;
 
         this.canGrab = true;
@@ -32,7 +32,7 @@ class Node {
                 spawnNode(mouseX, mouseY, this.type);
                 const newNode = activeNodes[activeNodes.length - 1];
                 console.log(newNode);
-                grab(newNode, null, null, 0, viewPortSize.x - newNode.width, 0, viewPortSize.y - newNode.height);
+                grab(newNode, null, null, 0, viewPortSize.x - newNode.width, topBar.height, viewPortSize.y - newNode.height);
             }
         }
     }
@@ -65,13 +65,22 @@ class Node {
         text(this.name, this.x + 5, this.y)
             // grab check
         if (isSquareGrabbed(this, this.x, this.y - 20, this.x + this.width, this.y + 5)) {
-            grab(this, null, null, 0, viewPortSize.x - this.width, 0, viewPortSize.y - this.height);
+            grab(this, null, null, 0, viewPortSize.x - this.width, topBar.height, viewPortSize.y - this.height);
+            if (userDoubleClicked) {
+                previewedNode = this.Shader;
+            }
         }
 
         // preview screen
         if (this.Worker == null) {
             this.Shader.background(0);
         }
+        if (previewedNode == this.Shader) {
+
+            fill("orange");
+            rect(this.x + SETTINGS.nodeMargin - 2, this.y + SETTINGS.nodeMargin - 2, this.x + this.width - SETTINGS.nodeMargin * 2 + 2, this.y + this.width - SETTINGS.nodeMargin * 2 + 2);
+        }
+
         image(this.Shader, this.x + SETTINGS.nodeMargin, this.y + SETTINGS.nodeMargin, this.width - SETTINGS.nodeMargin * 2, this.width - SETTINGS.nodeMargin * 2);
 
         //------pins
@@ -91,7 +100,53 @@ class Node {
         }
 
         // delete button
+        noStroke();
         fill(150, 50, 50);
-        ellipse(this.x, this.y + width - 20, 2);
+        if (dist(this.x + this.width - 10, this.y - 10, mouseX, mouseY) < 10) {
+            fill(200, 100, 100);
+        }
+        ellipse(this.x + this.width - 10, this.y - 10, 10);
+        if ((dist(this.x + this.width - 10, this.y - 10, mouseX, mouseY) < 10 && (this.isBrowser != true) && mouseIsPressed) && this.grabbed) {
+            console.log("kill");
+            // kill pins & sliders
+            for (var i = 0; i < this.Ins.length; i++) {
+                if (this.Ins[i].link != null) {
+                    this.Ins[i].link.link = null;
+                    this.Ins[i].link.linkedTo = [];
+                    this.Ins[i].link = null;
+                }
+                this.Ins[i].linkedTo = null;
+                if (this.Ins[i].slider != null) {
+                    console.log("removing slider")
+                    this.Ins[i].slider.remove();
+                }
+                if (this.Ins[i].select != null) {
+                    this.Ins[i].select.remove();
+                }
+                /* this.Ins.splice(i, 1); */
+            }
+            for (var i = 0; i < this.Outs.length; i++) {
+                if (this.Outs[i].link != null) {
+                    this.Outs[i].link.link = null;
+                    this.Outs[i].link.linkedTo = [];
+                    this.Outs[i].link = null;
+                }
+                console.log(this.Outs[i]);
+                this.Outs[i].linkedTo = null;
+                if (this.Outs[i].slider != null) {
+
+                    this.Outs[i].slider.remove();
+                }
+                /* this.Outs.splice(i, 1); */
+            }
+            this.kill = true;
+            release();
+        }
+    }
+
+    selectPreviewNode() {
+        if (previewingInBackground) {
+
+        }
     }
 }
