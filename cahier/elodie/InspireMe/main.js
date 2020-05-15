@@ -2,8 +2,6 @@
  *  Example P5JS canvas
  */
 
-
-
 const GUI = new dat.GUI();
 GUI.closed= false;
 
@@ -22,12 +20,17 @@ const numOfPalettes = 10;
 const GRID = {
     num_x: 5,
     num_y: 5,
-    cell_h: 50,
-    cell_w: 50,
+    cell_h: 100,
+    cell_w: 100,
     imgIndex: 0,
     choosePalette: () => {
         GRID.imgIndex = floor(random(imgs.length));
-        console.log(GRID.imgIndex);
+        for (let j = 0; j < GRID.num_y; j++) {
+            for (let i = 0; i < GRID.num_x; i++) {
+                const idx = i + j * GRID.num_x
+                data[idx] = 1;
+            }
+        }
     },
     saveInspo: () => {
         const offs_x = (width - GRID.cell_w * GRID.num_x) / 2
@@ -39,9 +42,15 @@ const GRID = {
         saveCanvas.image(c, 0, 0);
         save(saveCanvas, frameCount + ".png");
         saveCanvas.clear();
-    }
-
-
+    },
+    clearCanvas: () => {
+        for (let j = 0; j < GRID.num_y; j++) {
+            for (let i = 0; i < GRID.num_x; i++) {
+                const idx = i + j * GRID.num_x
+                data[idx] = 2;
+            }
+        }
+    } 
 }
 
 const data = new Array(GRID.num_x * GRID.num_y).fill(5)
@@ -68,9 +77,9 @@ function setup() {
     GUI.add(GRID, 'cell_h', GRID.cell_size).min(5).max(150).step(1);
     GUI.add(GRID, 'cell_w', GRID.cell_size).min(5).max(150).step(1);
     const palette_control = GUI.add(GRID, 'choosePalette').name("Random Colors");
+    const clear_canvas = GUI.add(GRID, 'clearCanvas').name("Clear Design");
     const save_button = GUI.add(GRID, 'saveInspo').name("Save PNG");
-
-
+    
     num_x_control.onChange(function () {
         data.length = GRID.num_x * GRID.num_y;
         data.fill(0);
@@ -91,7 +100,6 @@ function setup() {
             }
         }
 
-
         img = imgs[GRID.imgIndex]
 
         for (let i = 0; i < img.width; i++) {
@@ -101,7 +109,6 @@ function setup() {
 
 
 }
-
 
 function draw() {
     changeColor = (changeColor + 1) % palette.length;
@@ -124,9 +131,6 @@ function draw() {
             rect(x, y, GRID.cell_w, GRID.cell_h)
         }
     }
-
-
-
 
     // render
     background(255)
