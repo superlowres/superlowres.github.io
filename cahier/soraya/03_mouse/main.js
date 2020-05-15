@@ -10,11 +10,7 @@ let CELL = 20 //10
 let capture, offscreen
 
 
-let myFont;
 
-function preload() {
-  myFont = loadFont('fonts/GT-Cinetype-Light.woff');
-}
 
 function setup() {
   createCanvas(windowWidth, windowHeight)
