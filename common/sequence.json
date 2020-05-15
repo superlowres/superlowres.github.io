@@ -75,6 +75,11 @@
         "description": "A system that creates live visuals based on video input"
     },
     {
+           "nom": "Lily Rose Hold",
+           "dossier": "lily/ex_11_image_gallery",
+           "description": "Image Gallery"
+    },
+    {
         "nom": "Lily Rose Hold",
         "dossier": "lily/lowhigh_withgui",
         "description": "Create a modern Picasso collage, using your webcam."
@@ -83,7 +88,7 @@
         "nom": "Lily Rose Hold",
         "dossier": "lily/ex_9_lowhigh_dynamic",
         "description": "Pixelated dynamic grid, your mouse hover reveals what's underneath."
-       },
+    },
     {
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_0-sdf-draw",
