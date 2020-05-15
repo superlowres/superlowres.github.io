@@ -1,18 +1,13 @@
 [
     {
         "nom": "Achille Masson",
-        "dossier": "achille/experiment",
+        "dossier": "achille/type_generator_2.0",
         "description": "type_generator_2"
     },
     {
         "nom": "Achille Masson",
-        "dossier": "achille/type_generator",
+        "dossier": "achille/type_generator_3.0",
         "description": "type_generator_3"
-    },
-    {
-        "nom": "Achille Masson",
-        "dossier": "achille/superlowres_font",
-        "description": "superlowres_font"
     },
     {
         "nom": "Nathanaël Vianin",
@@ -50,40 +45,15 @@
         "description": "oui oui"
     },
     {
-        "nom": "Mélanie Fontaine",
-        "dossier": "melanie/ex_1.1",
-        "description": "Grille clignotante"
-    },
-    {
         "nom": "Elodie Anglade",
-        "dossier": "elodie/1-CodeCompilation",
-        "description": "Compilation of videos from codes made during the week"
-    },
-    {
-        "nom": "Elodie Anglade",
-        "dossier": "elodie/2-InspireMe",
-        "description": "A tool that helps find visual inspiration"
-    },
-    {
-        "nom": "Bogdan Nastase",
-        "dossier": "bogdan/Live_Vis_1",
-        "description": "A system that creates live visuals based on video input"
-    },
-    {
-        "nom": "Bogdan Nastase",
-        "dossier": "bogdan/Live_Vis_4",
-        "description": "A system that creates live visuals based on video input"
+        "dossier": "elodie/InspireMe",
+        "description": "InspireMe tool"
     },
     {
         "nom": "Lily Rose Hold",
-        "dossier": "lily/lowhigh_withgui",
-        "description": "Create a modern Picasso collage, using your webcam."
+        "dossier": "lily/ex_8_lowhigh",
+        "description": "i am so low I got high"
     },
-    {
-        "nom": "Lily Rose Hold",
-        "dossier": "lily/ex_9_lowhigh_dynamic",
-        "description": "Pixelated dynamic grid, your mouse hover reveals what's underneath."
-       },
     {
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_0-sdf-draw",
@@ -127,12 +97,7 @@
     {
         "nom": "Iris Moine",
         "dossier": "iris/iris_musique_4",
-        "description": "Drumsrider interactive installation"
-    },
-    {
-        "nom": "Iris Moine",
-        "dossier": "iris/iris_gallery",
-        "description": "Day 3 installation sketch"
+        "description": "interactive_installation"
     },
     {
         "nom": "Soraya Camina",
@@ -147,37 +112,37 @@
     {
         "nom": "Soraya Camina",
         "dossier": "soraya/03_mouse",
-        "description": "Division en bougeant la souris."
+        "description": "Division souris."
     },
     {
         "nom": "Soraya Camina",
         "dossier": "soraya/04_divide-sliders",
-        "description": "Générateur modulable de pattern dans le but d'en créer des textiles."
+        "description": "Générateur de pattern dans le but d'en créer des textiles."
     },
     {
-        "nom": "Soraya Camina",
-        "dossier": "soraya/05_gallerie_patterns",
-        "description": "Galerie des patterns créés."
+        "nom": "Samuel Dumez",
+        "dossier": "sam/fontfface",
+        "description": "Visage Typographique"
     },
     {
-        "nom": "Soraya Camina",
-        "dossier": "soraya/06_gallerie_textiles",
-        "description": "Application des patterns sur textiles."
-    },
-        {
-        "nom": "Jamy Herrmann",
-        "dossier": "jamy/qrcode",
-        "description": "Générateur aléatoire de QRcode."
-    },
-        {
-        "nom": "Jamy Herrmann",
-        "dossier": "jamy/codebar",
-        "description": "Générateur aléatoire de code-bar."
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_1",
+        "description": "Recherches_1"
     },
     {
-        "nom": "Jamy Herrmann",
-        "dossier": "jamy/loweredreality",
-        "description": "Réalité diminuée en basse résolution."
+        "nom": "Samuel Dumez",
+        "dossier": "sam/echerche_2",
+        "description": "Recherches_2"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/echerche_3",
+        "description": "Recherches_3"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/echerche_4",
+        "description": "Recherches_4"
     },
     {
         "nom": "Andreas Gysin",
@@ -232,17 +197,26 @@
     {
         "nom": "Samuel Dumez",
         "dossier": "sam/fontfface",
-        "description": "alphabettest."
+        "description": "Visage Typographique"
     },
     {
-        "nom": "Martial Grin",
-        "dossier": "martial/main",
-        "description": "Timeline d'expérimentations formelles."
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_1",
+        "description": "Recherches_1"
     },
     {
-        "nom": "Martial Grin",
-        "dossier": "martial/grid",
-        "description": "Mise en valeurs des projets avec des grilles."
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_2",
+        "description": "Recherches_2"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_3",
+        "description": "Recherches_3"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_4",
+        "description": "Recherches_4"
     }
-
 ]

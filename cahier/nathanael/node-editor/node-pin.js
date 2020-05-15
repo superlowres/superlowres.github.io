@@ -4,10 +4,13 @@ class NodePin {
         this.x;
         this.y;
         this.link;
+        this.linkedTo = [];
         this.node = node;
         this.label = "";
         this.slider;
+        this.select;
         this.color = 200;
+        this.pin = false;
 
         this.isInput = true;
         this.isOutput = !this.isInput;
@@ -26,6 +29,10 @@ class NodePin {
             noStroke();
             text(this.slider.value(), this.x + 120, this.y + 2);
         }
+        if (this.select != null) {
+            this.select.position(this.x + 4, this.y + 5);
+        }
+
         //check for linking
         if (isGrabbed(this, this.x, this.y, SETTINGS.pinRadius) && mouseIsPressed) {
             if (!linking && this.link == null && dist(mouseX, mouseY, this.x, this.y)) {
@@ -39,11 +46,13 @@ class NodePin {
 
                     this.color = 255;
                     link2 = this;
-                } else if (true) {
+                } else if (link2 == null) {
                     stroke("orange");
                     line(this.x, this.y, mouseX, mouseY);
                 }
             } else if (this.link != null) {
+                removeFrom(this.link.linkedTo, this);
+                removeFrom(this.linkedTo, this.link);
                 this.link.link = null;
                 this.link = null;
             }
@@ -64,7 +73,12 @@ class NodePin {
     draw() {
         stroke(23);
         fill(this.color);
-        ellipse(this.x, this.y, SETTINGS.pinRadius);
+        if (this.pin) {
+            ellipse(this.x, this.y, SETTINGS.pinRadius);
+        }
+        if (this.slider) {
+
+        }
 
         noStroke();
         text(this.label, this.x + 9, this.y + 2.5)
