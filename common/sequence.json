@@ -110,6 +110,11 @@
         "description": "Drumsrider interactive installation"
     },
     {
+        "nom": "Iris Moine",
+        "dossier": "iris/iris_gallery",
+        "description": "Day 3 installation sketch"
+    },
+    {
         "nom": "Soraya Camina",
         "dossier": "soraya/01_grid",
         "description": "Pattern Grid."
@@ -138,6 +143,21 @@
         "nom": "Soraya Camina",
         "dossier": "soraya/06_gallerie_textiles",
         "description": "Application des patterns sur textiles."
+    },
+        {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/qrcode",
+        "description": "Générateur aléatoire de QRcode."
+    },
+        {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/codebar",
+        "description": "Générateur aléatoire de code-bar."
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/loweredreality",
+        "description": "Réalité diminuée en basse résolution."
     },
     {
         "nom": "Andreas Gysin",
