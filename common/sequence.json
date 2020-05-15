@@ -76,9 +76,14 @@
     },
     {
         "nom": "Lily Rose Hold",
-        "dossier": "lily/ex_8_lowhigh",
-        "description": "i am so low I got high"
+        "dossier": "lily/lowhigh_withgui",
+        "description": "Create a modern Picasso collage, using your webcam."
     },
+    {
+        "nom": "Lily Rose Hold",
+        "dossier": "lily/ex_9_lowhigh_dynamic",
+        "description": "Pixelated dynamic grid, your mouse hover reveals what's underneath."
+       },
     {
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_0-sdf-draw",
