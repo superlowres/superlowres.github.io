@@ -4,6 +4,7 @@
  *  1. écrit quelque default (touchmove)
  *  2. injecte micro navigation
  *  3. injecte bouton audio
+ *  4. auto redirect https
  */
 
 // 1. Eject depuis un iframe, si jamais ---------------------------------------
@@ -11,12 +12,18 @@ if (top.location != document.location) {
     top.location.href = document.location.href
 }
 
-// 2. No "bounce" (mobnile) ---------------------------------------------------
+// 2. auto redirect https
+const HOST = "superlowr.es"
+if (window.location.host == HOST && window.location.protocol != "https:") {
+    window.location.protocol = "https:"
+}
+
+// 3. No "bounce" (mobnile) ---------------------------------------------------
 document.ontouchmove = function(e){
     e.preventDefault()
 }
 
-// 3. Boot baby ---------------------------------------------------------------
+// 4. Boot baby ---------------------------------------------------------------
 window.addEventListener("load", run)
 
 function run() {
@@ -54,7 +61,7 @@ function run() {
             <li class="over"><a class="btn btn_next" href="/cahier/${next.dossier}"></a></li>
             <li class="over"><a class="btn btn_home" href="/index.html"></a></li>
             <li><span class="index"><sup>${(current_index + 1)}</sup>/<sub>${data.length}<sub><span></li>
-            <li class="unbreak"><span class="nom">${data[current_index].nom}<span></li>
+            <li class="break"><span class="nom">${data[current_index].nom}<span></li>
             <li class="over"><span class="btn btn_play"></span></li>
             <li class="break"><canvas></canvas></li>
             </ul>
