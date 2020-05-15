@@ -52,7 +52,7 @@ function draw(){
 
 
   	// Preview de l'image:
-  	//image(offscreen, 0, 0)
+  	image(offscreen, 0, 0)
 
   	// HACK:
   	// .get() ne marche pas avec "p5.Capture" (bug de P5JS?)
