@@ -20,7 +20,7 @@ let lamps = []
 function preload() {
 	//le son est loadé ici
 	//song = loadSound("Bass jazz_funk loop .mp3");
-	song     = [loadSound("eliot_3.mp3"), loadSound("eliot_4.mp3"),loadSound("eliot_2.wav") ]
+	song     = [loadSound("eliot_2.wav"), loadSound("eliot_4.mp3"),loadSound("eliot_3.mp3") ]
 	bg_image = loadImage("auditorium_4.jpg")
 	lamps[0] = loadImage("amp_0.png")
 	lamps[1] = loadImage("amp_1.png")
@@ -50,16 +50,16 @@ function draw(){
 	let volume   = amplitude.getLevel();
 	let spectrum = fft.analyze();
 	let bass = (getSpectrumMean(spectrum, 0.0, 0.22)/ 255) * 2
-	let mid  = (getSpectrumMean(spectrum, 0.2, 0.5) / 255) * 2
+	let mid  = (getSpectrumMean(spectrum, 0.2, 0.5) / 255) * 1
 	let high = (getSpectrumMean(spectrum, 0.5, 1.0) / 255) * 2
 
 
 	// cercle qui tourne en ellipse
 	//tableau1
 	const x1 = Math.sin(frameCount*0.011) * 0.5;
-	const y1 = Math.cos(frameCount*0.052) *0.1;
-	const x2 = Math.sin(frameCount*0.013) * 0.1;
-	const y2 = Math.cos(frameCount*0.014) *0.6;
+	const y1 = Math.cos(frameCount*0.52) *0.1;
+	const x2 = Math.sin(frameCount*0.13) * 0.1;
+	const y2 = Math.cos(frameCount*0.14) *0.6;
 	const x3 = Math.cos(frameCount*0.5) * 0.2;
 	const y3 = Math.cos(frameCount*0.12) * 0.2;
 
