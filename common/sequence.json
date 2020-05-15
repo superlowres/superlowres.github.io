@@ -51,8 +51,13 @@
     },
     {
         "nom": "Elodie Anglade",
-        "dossier": "elodie/InspireMe",
-        "description": "InspireMe tool"
+        "dossier": "elodie/1-CodeCompilation",
+        "description": "Compilation of videos from codes made during the week"
+    },
+    {
+        "nom": "Elodie Anglade",
+        "dossier": "elodie/2-InspireMe",
+        "description": "A tool that helps find visual inspiration"
     },
     {
         "nom": "Lily Rose Hold",
@@ -116,8 +121,13 @@
     },
     {
         "nom": "Soraya Camina",
+        "dossier": "soraya/03_mouse",
+        "description": "Division en bougeant la souris."
+    },
+    {
+        "nom": "Soraya Camina",
         "dossier": "soraya/04_divide-sliders",
-        "description": "Générateur de pattern dans le but d'en créer des textiles."
+        "description": "Générateur modulable de pattern dans le but d'en créer des textiles."
     },
     {
         "nom": "Soraya Camina",
