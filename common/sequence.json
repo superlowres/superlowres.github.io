@@ -53,27 +53,27 @@
     {
         "nom": "Mélanie Fontaine",
         "dossier": "melanie/ex_7.5",
-        "description": "oui oui"
+        "description": "Oui oui."
     },
     {
         "nom": "Elodie Anglade",
         "dossier": "elodie/01-CodeCompilation",
-        "description": "InspireMe tool"
+        "description": "InspireMe tool."
     },
     {
         "nom": "Elodie Anglade",
         "dossier": "elodie/02-InspireMe",
-        "description": "InspireMe tool"
+        "description": "InspireMe tool."
     },
     {
         "nom": "Lily Rose Hold",
         "dossier": "lily/ex_8_lowhigh",
-        "description": "i am so low I got high"
+        "description": "i am so low I got high."
     },
     {
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_0-sdf-draw",
-        "description": "SDF dessin de formes"
+        "description": "SDF dessin de formes."
     },
     {
         "nom": "Loris Briguet",
@@ -133,12 +133,12 @@
     {
         "nom": "Salome Dotter",
         "dossier": "salome/pose_and_puzzle",
-        "description": "Pose and Puzzle !"
+        "description": "Pose and Puzzle!"
     },
     {
         "nom": "Iris Moine",
         "dossier": "iris/iris_musique_4",
-        "description": "interactive_installation"
+        "description": "Interactive installation."
     },
     {
         "nom": "Soraya Camina",
@@ -162,33 +162,28 @@
     },
     {
         "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_1",
+        "description": "Recherches 1."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_2",
+        "description": "Recherches 2."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_3",
+        "description": "Recherches 3."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_4",
+        "description": "Recherches 4."
+    },
+    {
+        "nom": "Samuel Dumez",
         "dossier": "sam/fontfface",
         "description": "Visage Typographique"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_1",
-        "description": "Recherches_1"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/echerche_2",
-        "description": "Recherches_2"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/echerche_3",
-        "description": "Recherches_3"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/echerche_4",
-        "description": "Recherches_4"
-    },
-    {
-        "nom": "Andreas Gysin",
-        "dossier": "andreas/ex_1_SDF",
-        "description": "Example SDF."
     },
     {
         "nom": "Andreas Gysin",
@@ -234,30 +229,5 @@
         "nom": "Andreas Gysin",
         "dossier": "andreas/ex_10_proportional",
         "description": "Matrice 'responsive'."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/fontfface",
-        "description": "Visage Typographique"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_1",
-        "description": "Recherches_1"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_2",
-        "description": "Recherches_2"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_3",
-        "description": "Recherches_3"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_4",
-        "description": "Recherches_4"
     }
 ]
