@@ -88,5 +88,10 @@
 		"nom" 	        : "Elodie Anglade",
 		"dossier" 		: "elodie/day4",
 		"description"	: "InspireMe tool"
+	},
+	{
+		"nom" 	        : "Salome Dotter",
+		"dossier" 		: "salome/day5",
+		"description"	: "salome/poseandpuzzle"
 	}
 ]
