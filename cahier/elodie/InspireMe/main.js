@@ -5,6 +5,10 @@
 
 
 const GUI = new dat.GUI();
+GUI.closed= false;
+
+var customContainer = document.getElementById('my-gui-container');
+customContainer.appendChild(GUI.domElement);
 
 let saveCanvas;
 let imgs = []
@@ -13,7 +17,7 @@ let img
 let palette = [];
 let changeColor = 0
 
-const numOfPalettes = 4;
+const numOfPalettes = 10;
 
 const GRID = {
     num_x: 5,
@@ -30,6 +34,8 @@ const GRID = {
         const offs_y = (height - GRID.cell_h * GRID.num_y) / 2
 
         let c = get(offs_x, offs_y, GRID.cell_w * GRID.num_x, GRID.cell_h * GRID.num_y);
+
+        saveCanvas = createGraphics(GRID.cell_w * GRID.num_x, GRID.cell_h * GRID.num_y);
         saveCanvas.image(c, 0, 0);
         save(saveCanvas, frameCount + ".png");
         saveCanvas.clear();
@@ -59,8 +65,8 @@ function setup() {
 
     const num_x_control = GUI.add(GRID, 'num_x', GRID.num_x).min(1).max(20).step(1);
     const num_y_control = GUI.add(GRID, 'num_y', GRID.num_x).min(1).max(20).step(1);
-    GUI.add(GRID, 'cell_h', GRID.cell_size).min(5).max(100).step(1);
-    GUI.add(GRID, 'cell_w', GRID.cell_size).min(5).max(100).step(1);
+    GUI.add(GRID, 'cell_h', GRID.cell_size).min(5).max(150).step(1);
+    GUI.add(GRID, 'cell_w', GRID.cell_size).min(5).max(150).step(1);
     const palette_control = GUI.add(GRID, 'choosePalette').name("Random Colors");
     const save_button = GUI.add(GRID, 'saveInspo').name("Save PNG");
 
@@ -141,7 +147,7 @@ function draw() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth, windowHeight)
+    resizeCanvas(windowWidth-245, windowHeight)
 }
 
 
