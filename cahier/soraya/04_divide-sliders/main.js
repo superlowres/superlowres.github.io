@@ -43,6 +43,9 @@ function setup() {
 }
 
 function draw() {
+
+  	const ZOOM = Math.round(Math.min(height/(GRID.HAUTEUR+4), width / (GRID.LARGEUR+4)))
+
   background(0)
 
         // GRID.LARGEUR = 4 * GRID.ZOOM

@@ -1,12 +1,12 @@
 [
     {
         "nom": "Achille Masson",
-        "dossier": "achille/type_generator_2.0",
+        "dossier": "achille/experiment",
         "description": "type_generator_2"
     },
     {
         "nom": "Achille Masson",
-        "dossier": "achille/type_generator_3.0",
+        "dossier": "achille/type_generator",
         "description": "type_generator_3"
     },
     {
@@ -51,8 +51,13 @@
     },
     {
         "nom": "Elodie Anglade",
-        "dossier": "elodie/InspireMe",
-        "description": "InspireMe tool"
+        "dossier": "elodie/1-CodeCompilation",
+        "description": "Compilation of videos from codes made during the week"
+    },
+    {
+        "nom": "Elodie Anglade",
+        "dossier": "elodie/2-InspireMe",
+        "description": "A tool that helps find visual inspiration"
     },
     {
         "nom": "Lily Rose Hold",
@@ -121,8 +126,13 @@
     },
     {
         "nom": "Soraya Camina",
+        "dossier": "soraya/03_mouse",
+        "description": "Division en bougeant la souris."
+    },
+    {
+        "nom": "Soraya Camina",
         "dossier": "soraya/04_divide-sliders",
-        "description": "Générateur de pattern dans le but d'en créer des textiles."
+        "description": "Générateur modulable de pattern dans le but d'en créer des textiles."
     },
     {
         "nom": "Soraya Camina",
@@ -188,6 +198,11 @@
         "nom": "Samuel Dumez",
         "dossier": "sam/fontfface",
         "description": "alphabettest."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/main",
+        "description": "Timeline d'expérimentations formelles."
     }
 
 ]
