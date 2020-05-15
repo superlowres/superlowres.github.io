@@ -3,5 +3,7 @@ const SETTINGS = {
     nodeBgColor: 120,
     pinRadius: 10,
     sliderWidth: 12,
-    ShaderRes: 128
+    ShaderRes: 64
 }
+
+var ShaderRes = 32;

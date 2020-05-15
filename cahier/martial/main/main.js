@@ -1,4 +1,6 @@
-const GUI = new dat.GUI();
+const GUI = new dat.GUI({autoPlace : false});
+var customContainer = document.getElementById('gui');
+customContainer.appendChild(GUI.domElement);
 
 const NUM_X = 64
 const NUM_Y = 64
@@ -268,7 +270,7 @@ function v24() {
       const v = data[idx];
       // const pal_idx = Math.floor(map(v, 0, 1, 0, palette.pixels.length));
       fill(Math.round(v) * 255)
-      rect(x, y, CELL - 1, CELL - 1)
+      rect(x, y, CELL - 0.1, CELL - 0.1)
       // ellipse(x, y, CELL * v, CELL * v)
     }
   }

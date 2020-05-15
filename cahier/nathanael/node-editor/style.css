@@ -12,3 +12,11 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#load {
+    position: fixed;
+    top: 0;
+    width: 90px;
+    right: 55px;
+    color: transparent;
+}
