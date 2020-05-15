@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>P5JS canvas</title>
+	<title>Picasso 2.0.2.0</title>
 	<meta name="description" 							content="P5JS canvas template">
 	<meta name="author"                       			content="Andreas">
 	<meta name="viewport" 								content="width=device-width,initial-scale=1">
@@ -22,12 +22,26 @@
 		body{
 			margin:0;
 			padding:0;
+			
 		}
 		canvas {
 			display:block;
 			width:100vw;
 			height:100vh;
 		}
+
+		/* .moveGUI{ 
+    	position: absolute;
+    	top: 13.1em;
+		right: -1em; */
+		
+		#my-gui-container {
+		position: absolute;
+		top: 0px;
+		left: 20px;
+		z-index: 10;
+}
+}
 	</style>
 </head>
 
@@ -35,5 +49,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
 	<script type="module" src="/common/common.js"></script>
 	<script src="main.js"></script>
+	<div id="my-gui-container"></div>
 </body>
 </html>
