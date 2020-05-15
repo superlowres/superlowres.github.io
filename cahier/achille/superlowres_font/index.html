@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta name="description" 							content="P5JS canvas template">
+	<meta name="author"                       			content="Andreas">
+	<meta name="viewport" 								content="width=device-width,initial-scale=1">
+	<meta name="mobile-web-app-capable" 				content="yes">
+	<meta name="apple-mobile-web-app-capable" 			content="yes">
+	<meta name="theme-color" 							content="black">
+	<meta name="msapplication-navbutton-color" 			content="black">
+	<meta name="apple-mobile-web-app-status-bar-style" 	content="black">
+	<link rel="apple-touch-icon" href="/common/icon_192.png">
+	<link rel="shortcut icon"    href="/common/icon_32.png">
+	<style rel="stylesheet" href="/common/common.css" type="text/css"></style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel='stylesheet' href='style/bootstrap.min.css'>
+  <link rel="stylesheet" href="style/style_f.css">
+  <link rel='stylesheet' href='style/fullPage.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style type="text/css">
+
+		html {
+
+		}
+		body{
+      position: relative !important;
+
+
+		}
+		canvas {
+
+			width:100vw;
+			height:100vh;
+		}
+
+input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 15px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+
+  background: #000;
+  cursor: pointer;
+}
+
+input::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+
+  background: #000;
+  cursor: pointer;
+}
+
+.button{
+  background: #fff;
+  border-radius: 35px;
+  font-size: 40px;
+  border:solid;
+  width: 300px;
+  cursor:pointer;
+}
+	</style>
+</head>
+<body>
+
+<div id="fullpage">
+    <div class="section" data-anchor="slide0">
+      <div class="container-fluid">
+        <div class="row ">
+          <div id="container2" class=" col col-12 sentence">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" data-anchor="slide1">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/a.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/h.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/o.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/v.jpg" alt="" width="150px"></p></div>
+        </div>
+
+      <div class="row">
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/b.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/i.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/p.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/w.jpg" alt="" width="150px"></p></div>
+
+                </div>
+      <div class="row">
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/c.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/j.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/q.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/x.jpg" alt="" width="150px"></p></div>
+
+      </div>
+      <div class="row">
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/d.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/k.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/r.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/y.jpg" alt="" width="150px"></p></div>
+
+      </div>
+      <div class="row">
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/e.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/l.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/s.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/z.jpg" alt="" width="150px"></p></div>
+
+      </div>
+      <div class="row">
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/f.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/m.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/t.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/blanc.png" alt="" width="150px"></p></div>
+      </div>
+      <div class="row">
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/g.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/n.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/u.jpg" alt="" width="150px"></p></div>
+        <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/minuscule/blanc.png" alt="" width="150px"></p></div>
+      </div>
+    </div>
+  </div>
+
+    <div class="section" data-anchor="slide2">
+      <div class="container-fluid ">
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/a.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/h.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/o.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/v.jpg" alt="" width="150px"></p></div>
+        </div>
+
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/b.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/i.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/p.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/w.jpg" alt="" width="150px"></p></div>
+
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/c.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/j.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/q.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/x.jpg" alt="" width="150px"></p></div>
+
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/d.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/k.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/r.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/y.jpg" alt="" width="150px"></p></div>
+
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/e.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/l.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/s.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/z.jpg" alt="" width="150px"></p></div>
+
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/f.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/m.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/t.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/blanc.png" alt="" width="150px"></p></div>
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/g.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/n.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/u.jpg" alt="" width="150px"></p></div>
+          <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/majuscule/blanc.png" alt="" width="150px"></p></div>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="section" data-anchor="slide3">
+        <div class="container-fluid ">
+          <div class="row">
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/0.jpg" alt="" width="150px"></p></div>
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/5.jpg" alt="" width="150px"></p></div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/1.jpg" alt="" width="150px"></p></div>
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/6.jpg" alt="" width="150px"></p></div>
+
+          </div>
+          <div class="row">
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/2.jpg" alt="" width="150px"></p></div>
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/7.jpg" alt="" width="150px"></p></div>
+          </div>
+          <div class="row">
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/3.jpg" alt="" width="150px"></p></div>
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/8.jpg" alt="" width="150px"></p></div>
+
+          </div>
+          <div class="row">
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/4.jpg" alt="" width="150px"></p></div>
+            <div class="col-3 col-sm-2  "><p ><img class="icon" src="./src/chiffre/9.jpg" alt="" width="150px"></p></div>
+          </div>
+
+
+          </div>
+        </div>
+
+        <div class="section" data-anchor="slide3">
+          <div class="container-fluid ">
+
+
+            <div class="row">
+              <form method="get" action="superlowres_regular.ttf">
+                <button class="button" type="submit">download</button>
+              </form>
+            </div>
+
+
+            </div>
+          </div>
+
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+<script type="module" src="/common/common.js"></script>
+
+
+<!-- Script -->
+<script src="script/fullpage.js"></script>
+<script src='script/jquery-3.4.1.min.js'></script>
+<script src='script/bootstrap.min.js'></script>
+<script src="script/script_f.js"></script>
+<script>
+    var mini = true;
+
+    function toggleSidebar() {
+        if (mini) {
+            console.log("opening sidebar");
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("fullpage").style.marginLeft = "0px";
+            this.mini = false;
+        } else {
+            console.log("closing sidebar");
+            document.getElementById("mySidebar").style.width = "36px";
+            document.getElementById("fullpage").style.marginLeft = "0px";
+            this.mini = true;
+        }
+    }
+
+</script>
+<script src="main.js"></script>
+
+</body>
+</html>
