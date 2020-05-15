@@ -2,13 +2,13 @@
  * 	Reduction d'une image
  */
 
-let NUM_X = 70
+let NUM_X = 100
 let NUM_Y = 70
 let CELL  = 5
 const EYE_SPACING = 10
 const DISTANCE = 50
 let x, y, z
-const MAX_TIME = 60
+const MAX_TIME = 50
 const speed = 10
 
 let capture, offscreenG,offscreenD
@@ -23,16 +23,28 @@ function setup(){
     createCanvas(windowWidth, windowHeight, WEBGL)
     setInterval(timeIt, 1000);
             
-    slider = createSlider(0, 255, 100);
+    //ESPACE BLOC
+    slider = createSlider(0, 255, 20);
     slider.position(20, 20);
     slider.style('width', '80px');
-    slider02 = createSlider(0, 255, 100);
-    slider02.position(170, 20);
-    slider02.style('width', '80px');
     
-    slider03 = createSlider(0, 255, 100);
-    slider03.position(330, 20);
-    slider03.style('width', '80px');
+    //ESPACE CAM X
+    slider02 = createSlider(0, 255, 20)
+    slider02.position(170, 20)
+    slider02.style('width', '80px')
+
+    //ESPACE YEUX
+    slider03 = createSlider(0, 255, 80)
+    slider03.position(330, 20)
+    slider03.style('width', '80px')
+    
+    slider04 = createSlider(0, 255, 40)
+    slider04.position(480, 20)
+    slider04.style('width', '80px')
+    
+    slider05 = createSlider(0, width - 100, 0)
+    slider05.position(50, height - 100)
+    slider05.style('width', '80px')
     
     x = 0
     y = 0
@@ -48,13 +60,16 @@ function setup(){
     offscreenD.textFont(fontRegular)
     offscreenD.textSize(width / 3)
     offscreenD.textAlign(CENTER, CENTER)
+    
+    let html = document.getElementById('html');
 }
 
 function draw(){
 
     let val = map(slider.value(),0,100,30,-width/12 - 30)
-    let cam_dist = map(slider02.value(),0,100,0,width/12)
-    let nbCELL = map(slider03.value(),0,100,0,width/12)
+    let cam_dist = map(slider02.value(),0,100,-20,width/12)
+    let EYE_SPACING = map(slider03.value(),0,100,-20,20)
+    let CELL = map(slider04.value(),0,100,3,8)
     // Resize proportionel et centree de l’image (de la webcam)
     // sur le "offscreen"
     offscreenG.noStroke()
@@ -78,17 +93,40 @@ function draw(){
     push()//---------------------------------------------------------------- OEIL GAUCHE //
         translate((-NUM_X*CELL)/2 + val,0)
         push()//--------------------------------------------- OBJET //
-            push()
+            offscreenG.push()
+                offscreenG.translate(-EYE_SPACING,0,-cam_dist)
                 x+=accelerationX*0.05
                 y+=accelerationY*0.05
                 z+=accelerationZ*0.05
                 offscreenG.normalMaterial()
-                offscreenG.camera(-EYE_SPACING, 0, cam_dist + DISTANCE + sin(frameCount * 0.01) *10, 0, 0, 0, 0, 1, 0)
-                offscreenG.rotateX(x)
-                offscreenG.rotateY(y)
-                offscreenG.rotateZ(z)
+                //offscreenG.camera(-EYE_SPACING, 0, cam_dist + DISTANCE + sin(frameCount * 0.01) *10, 0, 0, 0, 0, 1, 0)
     
-                if(timerValue<= speed *1){
+                if(timerValue< speed){
+                    //TEXT
+                    offscreenG.push()
+                    offscreenG.translate(0,-5,sin(frameCount * 0.5) *5)
+                    offscreenG.rotateY(sin(frameCount * 0.25)/4)
+                    offscreenG.fill(0,0,0)
+                    offscreenG.strokeWeight(0)
+                    offscreenG.textSize(10)
+                    offscreenG.textFont(fontRegular)
+                    offscreenG.text('LOWERED', 0, 0)
+                    offscreenG.text('REALITY', 0, 10)
+                    offscreenG.pop()
+                     //TEXT
+                    offscreenG.push()
+                    offscreenG.translate(0,-5,sin(frameCount * 0.5) * 5 + 3)
+                    offscreenG.rotateY(sin(frameCount * 0.25)/4)
+                    offscreenG.fill(0,0,254)
+                    offscreenG.strokeWeight(0)
+                    offscreenG.textSize(10)
+                    offscreenG.textFont(fontRegular)
+                    offscreenG.text('LOWERED', 0, 0)
+                    offscreenG.text('REALITY', 0, 10)
+                    offscreenG.pop()
+                 }
+    
+                if(timerValue < speed*2 && timerValue>= speed*1){
                     //CUBE
                     offscreenG.push()
                     offscreenG.rotateX(frameCount/10)
@@ -98,37 +136,46 @@ function draw(){
                     offscreenG.pop()
                 }
     
-                if(timerValue>= speed*1 && timerValue < speed*2){
+                if(timerValue < speed*3 && timerValue>= speed*2){
                     //SPHERE
                     offscreenG.push()
                     offscreenG.rotateX(frameCount/10)
                     offscreenG.rotateY(frameCount/10)
                     //offscreenG.rotateZ()
-                    offscreenG.sphere(20 + sin(frameCount * 0.1) *5)
+                    offscreenG.stroke(0)
+                    offscreenG.strokeWeight(0.7)
+                    offscreenG.sphere(10 + sin(frameCount * 0.1) *5)
                     offscreenG.pop()
                 }
             
-                if(timerValue>= speed*2 && timerValue < speed*3){
-                    //SPHERE
+                if(timerValue < speed*4 && timerValue>= speed*3){
+                    //CONE
                     offscreenG.push()
                     offscreenG.rotateX(frameCount/10)
                     offscreenG.rotateY(frameCount/10)
                     offscreenG.rotateZ(frameCount/15)
-                    offscreenG.cone(20,20)
+                    offscreenG.cone(10,30)
                     offscreenG.pop()
                 }
     
-                //TEXT
-                offscreenG.push()
-                offscreenG.translate(0,20,0)
-                //offscreenG.rotateX(rotate(0.001))
-                offscreenG.fill(0)
-                offscreenG.strokeWeight(0)
-                offscreenG.textSize(7)
-                offscreenG.textFont(fontRegular)
-                offscreenG.text('LOWERED REALITY', 0, 0)
-                offscreenG.pop()
-            pop()
+                if(timerValue < speed*5 && timerValue>= speed*4){
+                    //COULOIR
+                    offscreenG.push()
+                    //offscreenD.rotateX(frameCount/10)
+                    //offscreenD.rotateY(frameCount/10)
+                    //offscreenD.rotateZ(frameCount/15)
+                    offscreenG.translate(0,0,-sin(frameCount * 0.1) *100)
+                    offscreenG.noFill()
+                    offscreenG.stroke(0)
+                    offscreenG.strokeWeight(1.8)
+                    
+                    for(i = 0; i<20;i++){
+                        offscreenG.translate(0,0,-i*20)
+                          offscreenG.box(50-i,60-i,20)
+                    }
+                    offscreenG.pop()
+                }
+            offscreenG.pop()
         pop()//--------------------------------------------- OBJET //
 
         //------------------------- GRID OEIL
@@ -168,23 +215,44 @@ function draw(){
         }
     pop()//--------------------------------------------- OEIL GAUCHE //
 
-
-
-
-
-
     push()//----------------------------------------------------------------- OEIL DROIT //
         translate((NUM_X*CELL)/2 - val,0)
         push()//--------------------------------------------- OBJET //
             //offscreenD.translate(+EYE_SPACING/2,0)
-            push()
+            offscreenD.push()
+                offscreenD.translate(EYE_SPACING,0,-cam_dist)
                 x+=accelerationX*0.05
                 y+=accelerationY*0.05
                 z+=accelerationZ*0.05
                 offscreenD.normalMaterial()
-                offscreenD.camera(+EYE_SPACING, 0,  cam_dist + DISTANCE + sin(frameCount * 0.01) *10, 0, 0, 0, 0, 1, 0)
+                //offscreenD.camera(+EYE_SPACING, 0,  cam_dist + DISTANCE + sin(frameCount * 0.01) *10, 0, 0, 0, 0, 1, 0)
+    
+                if(timerValue< speed){
+                    //TEXT
+                    offscreenD.push()
+                    offscreenD.translate(0,-5,sin(frameCount * 0.5) *5)
+                    offscreenD.rotateY(sin(frameCount * 0.25)/4)
+                    offscreenD.fill(0,0,0)
+                    offscreenD.strokeWeight(0)
+                    offscreenD.textSize(10)
+                    offscreenD.textFont(fontRegular)
+                    offscreenD.text('LOWERED', 0, 0)
+                    offscreenD.text('REALITY', 0, 10)
+                    offscreenD.pop()
+                     //TEXT
+                    offscreenD.push()
+                    offscreenD.translate(0,-5,sin(frameCount * 0.5) * 5 + 3)
+                    offscreenD.rotateY(sin(frameCount * 0.25)/4)
+                    offscreenD.fill(0,0,254)
+                    offscreenD.strokeWeight(0)
+                    offscreenD.textSize(10)
+                    offscreenD.textFont(fontRegular)
+                    offscreenD.text('LOWERED', 0, 0)
+                    offscreenD.text('REALITY', 0, 10)
+                    offscreenD.pop()
+                 }
                 
-                if(timerValue<= speed){
+                if(timerValue < speed*2 && timerValue>= speed*1){
                     //CUBE
                     offscreenD.push()
                     offscreenD.rotateX(frameCount/10)
@@ -194,37 +262,46 @@ function draw(){
                     offscreenD.pop()
                 }
                 
-                if(timerValue>= speed*1 && timerValue < speed*2){
+                if(timerValue < speed*3 && timerValue>= speed*2){
                     //SPHERE
                     offscreenD.push()
                     offscreenD.rotateX(frameCount/10)
                     offscreenD.rotateY(frameCount/10)
                     //offscreenG.rotateZ()
-                    offscreenD.sphere(20 + sin(frameCount * 0.1) *5)
+                    offscreenD.stroke(0)
+                    offscreenD.strokeWeight(0.7)
+                    offscreenD.sphere(10 + sin(frameCount * 0.1) *5)
                     offscreenD.pop()
                 }
     
-                if(timerValue>= speed*2 && timerValue < speed*3){
-                    //SPHERE
+                if(timerValue < speed*4 && timerValue>= speed*3){
+                    //CONE
                     offscreenD.push()
                     offscreenD.rotateX(frameCount/10)
                     offscreenD.rotateY(frameCount/10)
                     offscreenD.rotateZ(frameCount/15)
-                    offscreenD.cone(20,20)
+                    offscreenD.cone(10,30)
                     offscreenD.pop()
                 }
     
-                    //TEXT
+                if(timerValue < speed*5 && timerValue>= speed*4){
+                    //COULOIR
                     offscreenD.push()
-                    offscreenD.translate(0,20,0)
-                    //offscreenG.rotateX(rotate(0.001))
-                    offscreenD.fill(0)
-                    offscreenD.strokeWeight(0)
-                    offscreenD.textSize(7)
-                    offscreenD.textFont(fontRegular)
-                    offscreenD.text('LOWERED REALITY', 0, 0)
+                    //offscreenD.rotateX(frameCount/10)
+                    //offscreenD.rotateY(frameCount/10)
+                    //offscreenD.rotateZ(frameCount/15)
+                    offscreenD.translate(0,0,-sin(frameCount * 0.1) *100)
+                    offscreenD.noFill()
+                    offscreenD.stroke(0)
+                    offscreenD.strokeWeight(1.8)
+                    
+                    for(i = 0; i<20;i++){
+                        offscreenD.translate(0,0,-i*20)
+                          offscreenD.box(50-i,60-i,20)
+                    }
                     offscreenD.pop()
-            pop()
+                }
+            offscreenD.pop()
         pop()//--------------------------------------------- OBJET //
     
     
@@ -251,7 +328,6 @@ function draw(){
         const wd2 = offscreenD.width * d2 * d2
     
         // Affichage final 
-        noStroke()
         for (let j=0; j<NUM_Y; j++) {
             for (let i=0; i<NUM_X; i++) {
                 const x = i * CELL + ox
@@ -262,22 +338,26 @@ function draw(){
                 const g = offscreenD.pixels[offs + 1]
                 const b = offscreenD.pixels[offs + 2]
                 fill(r, g, b)
-                rect(x, y, CELL, CELL)
+                if(r != 255 && g != 255 && b != 255){
+                    noStroke()
+                    rect(x, y, CELL, CELL)
+                }
             }
         }
     pop()//--------------------------------------------- OEIL DROIT //
-    
     //console.log(frameCount)
+    
+    html.style.filter = "hue-rotate(" + frameCount + "deg)"
+    
 }
 
 function timeIt() {
-  if (timerValue <= MAX_TIME) {
+  if (timerValue < MAX_TIME) {
     timerValue++;
   } else{
       timerValue = 0;
   }
 console.log(timerValue)
-    
 }
 
 function windowResized(){
