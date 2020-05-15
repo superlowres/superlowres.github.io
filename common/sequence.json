@@ -138,4 +138,9 @@
         "dossier": "salome/webcam_pixel",
         "description": "pose and puzzle"
     }
+    {
+        "nom": "Iris Moine",
+        "dossier": "iris/iris_musique_4",
+        "description": "interactive_installation"
+    }
 ]
