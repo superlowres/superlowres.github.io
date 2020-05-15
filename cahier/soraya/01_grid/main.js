@@ -16,8 +16,7 @@ function setup(){
 }
 
 function draw(){
-
-	  	const CELL = Math.round(Math.min(height/(GRID.HAUTEUR+4), width / (GRID.LARGEUR+4)))
+		const CELL = Math.round(Math.min(height/(GRID.HAUTEUR+4), width / (GRID.LARGEUR+4)))
   	background(255)
 
   	// Resize proportionel et centree de l’image (de la webcam)
