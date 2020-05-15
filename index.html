@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Super Low Rez</title>
-        <meta name="description"                           content="Super Low Resolution workshop, ECAL 2020 ">
+        <title>Super Low Resolution</title>
+        <meta name="description"                           content="Un workshop en LowDPI">
         <meta name="author"                                content="ECAL MID1">
         <meta name="viewport"                              content="width=device-width, initial-scale=1">
         <meta name="mobile-web-app-capable"                content="yes">
@@ -24,7 +24,6 @@
 
             body {
                 background-color: white;
-                font-family: Helvetica, Arial, sans-serif;
                 margin:3em;
             }
 
@@ -32,23 +31,34 @@
                 text-decoration: none;
                 color:blue;
             }
+
+
             a:hover{
                 text-decoration: underline;
             }
 
-            #output {
-            }
-            li{
-            	padding-bottom: 0.5em;
+            pre {
+                font-family: 'Courier New', Courier, monospace;
             }
         </style>
     </head>
     <body>
-        <h4>Super Low Resolution</h4>
-        <ul id="output"></ul>
+
+<pre id="output">
+                  Super Low Resolution
+
+                  un workshop en LowDPI
+                  ECAL
+                  Printemps 2020
+
+                  <a href="https://github.com/superlowres/superlowres.github.io">→ code repository</a>
+</pre>
 
         <script type="text/javascript">
-
+            var host = "superlowr.es"
+            if (window.location.host == host && window.location.protocol != "https:") {
+                window.location.protocol = "https:"
+            }
             fetch("common/sequence.json").then(function(res){
                 return res.json()
             }).then(function(json){
@@ -57,44 +67,34 @@
 
             function render(data){
                 const parent = document.querySelector("#output")
-                parent.innerHTML = ""
 
                 const BASE_FOLDER = "cahier"
+                const tab_size   = 18
+                const ruler_size = 80
+
+                let nom = ""
+                let out = ""
                 for (let i=0; i<data.length; i++) {
 
-                    const el = document.createElement("li")
-                    const v = localStorage.getItem(data[i].dossier) == 1 ? " " : "*"
-
+                    const visited = localStorage.getItem(data[i].dossier) == 1 ? " " : "*"
                     const url = BASE_FOLDER + "/" + data[i].dossier
-                    el.innerHTML += "<span>" + data[i].description + "</span><br>"
-                    el.innerHTML += "<a href=" + url + ">" + url + "</a><br>"
-                    parent.appendChild(el)
+
+                    if (nom != data[i].nom) {
+                        out += "<br>"
+                        out += "".padEnd(ruler_size, "-") + "<br>"
+                        out += data[i].nom.padEnd(tab_size, " ")
+                        nom = data[i].nom
+                    } else {
+                        out += "".padEnd(tab_size, " ")
+                    }
+                    out += data[i].description + "<br>"
+
+                    out += "".padEnd(tab_size, " ") + "<a href=" + url + ">→ " + url + "</a><br>"
                 }
+                parent.innerHTML += out
             }
 
         </script>
     </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

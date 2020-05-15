@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>InspireMe</title>
+	<meta name="description" 							content="InspireMe">
+	<meta name="author"                       			content="Elodie">
+	<meta name="viewport" 								content="width=device-width,initial-scale=1">
+	<meta name="mobile-web-app-capable" 				content="yes">
+	<meta name="apple-mobile-web-app-capable" 			content="yes">
+	<meta name="theme-color" 							content="black">
+	<meta name="msapplication-navbutton-color" 			content="black">
+	<meta name="apple-mobile-web-app-status-bar-style" 	content="black">
+	<link rel="apple-touch-icon" href="/common/icon_192.png">
+	<link rel="shortcut icon"    href="/common/icon_32.png">
+	<link rel="stylesheet"       href="/common/common.css" type="text/css"></style>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="js/datgui/dat.gui.css" type="text/css">
+	<style type="text/css">
+		html {
+			height:100vh;
+		}
+		body{
+			margin:0;
+			padding:0;
+		}
+		canvas {
+			display:block;
+			width:100vw;
+			height:100vh;
+		}
+	</style>
+	
+</head>
+
+<body class="disable-select disable-scroll">
+	<div id="mySidebar" class="sidebar">
+		<h1>Lacking inspiration?</h1>
+		<p>InspireMe is a creative tool that allows you to create a super-low-resolution design. This tool acts as clouds in the sky: sometimes, when you look at them closely, you'll start seeing things. The aim of this tool is to inspire you in a creative way!</p>
+		<div id="grid" class="invisible">
+			<div class="img_container"><img src ="imgs/example_1.gif"></div>
+			<div class="img_container"><img src ="imgs/example_2.gif"></div>
+			<div class="img_container"><img src ="imgs/example_3.gif"></div>
+			<div class="img_container"><img src ="imgs/example_4.gif"></div>
+			<div class="img_container"><img src ="imgs/example_5.gif"></div>
+			<div class="img_container"><img src ="imgs/example_6.gif"></div>
+			<div class="img_container"><img src ="imgs/example_7.gif"></div>
+			<div class="img_container"><img src ="imgs/example_8.gif"></div>
+			<div class="img_container"><img src ="imgs/example_9.gif"></div>
+			<div class="img_container"><img src ="imgs/example_10.gif"></div>
+		</div>
+		<a id="myToggle" onclick="toggleSidebar()">See examples</a>
+		
+	  </div>
+	  <div id="my-gui-container">
+		<h1>Settings</h1>
+	  </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+	<script type="module" src="/common/common.js"></script>
+	<script src="js/datgui/dat.gui.min.js"></script>
+	<script src="main.js"></script>
+	
+	<script>
+	var mini = true;
+
+	function toggleSidebar() {
+		
+	  if (mini) {
+		
+		document.getElementById("mySidebar").style.width = "100vw";
+		document.getElementById("mySidebar").style.height = "100vh";
+		document.getElementById("myToggle").innerText = "Back to tool";
+		document.getElementById("grid").classList.remove("invisible");
+		document.getElementById("mySidebar").style.zIndex = "15";
+	
+		
+
+		
+		this.mini = false;
+	  } else {
+		document.getElementById("mySidebar").style.width = "265px";
+		document.getElementById("mySidebar").style.height = "100vh";
+		document.getElementById("myToggle").innerText = "See examples";
+		document.getElementById("grid").classList.add("invisible");
+		document.getElementById("mySidebar").style.zIndex = "1";
+		
+		
+		
+		this.mini = true;
+	  }
+	}
+
+	</script>	
+</body>
+</html>
