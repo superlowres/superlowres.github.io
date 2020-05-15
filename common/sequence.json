@@ -50,6 +50,11 @@
         "description": "oui oui"
     },
     {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_1.1",
+        "description": "Grille clignotante"
+    },
+    {
         "nom": "Elodie Anglade",
         "dossier": "elodie/1-CodeCompilation",
         "description": "Compilation of videos from codes made during the week"
