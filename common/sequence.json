@@ -120,6 +120,16 @@
         "description": "Générateur de pattern dans le but d'en créer des textiles."
     },
     {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/05_galleries_patterns",
+        "description": "Galerie des patterns créés."
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/06_gallerie_textiles",
+        "description": "Application des patterns sur textiles."
+    },
+    {
         "nom": "Andreas Gysin",
         "dossier": "andreas/ex_1_SDF",
         "description": "Example SDF."
