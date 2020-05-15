@@ -57,7 +57,12 @@
     },
     {
         "nom": "Elodie Anglade",
-        "dossier": "elodie/InspireMe",
+        "dossier": "elodie/01-CodeCompilation",
+        "description": "InspireMe tool"
+    },
+    {
+        "nom": "Elodie Anglade",
+        "dossier": "elodie/02-InspireMe",
         "description": "InspireMe tool"
     },
     {
