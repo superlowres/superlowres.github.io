@@ -193,5 +193,30 @@
         "nom": "Andreas Gysin",
         "dossier": "andreas/ex_10_proportional",
         "description": "Matrice 'responsive'."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/fontfface",
+        "description": "Visage Typographique"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_1",
+        "description": "Recherches_1"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_2",
+        "description": "Recherches_2"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_3",
+        "description": "Recherches_3"
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_4",
+        "description": "Recherches_4"
     }
 ]
