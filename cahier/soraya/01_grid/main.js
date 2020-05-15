@@ -16,6 +16,8 @@ function setup(){
 }
 
 function draw(){
+
+	  	const CELL = Math.round(Math.min(height/(GRID.HAUTEUR+4), width / (GRID.LARGEUR+4)))
   	background(255)
 
   	// Resize proportionel et centree de l’image (de la webcam)
@@ -35,7 +37,7 @@ function draw(){
 
 
   	// Preview de l'image:
-  	image(offscreen, 0, 0)
+  	//image(offscreen, 0, 0)
 
   	// HACK:
   	// .get() ne marche pas avec "p5.Capture" (bug de P5JS?)
