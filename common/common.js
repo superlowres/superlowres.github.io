@@ -12,12 +12,18 @@ if (top.location != document.location) {
     top.location.href = document.location.href
 }
 
-// 2. No "bounce" (mobnile) ---------------------------------------------------
+// 2. auto redirect https
+const HOST = "superlowr.es"
+if (window.location.host == HOST && window.location.protocol != "https:") {
+    window.location.protocol = "https:"
+}
+
+// 3. No "bounce" (mobnile) ---------------------------------------------------
 document.ontouchmove = function(e){
     e.preventDefault()
 }
 
-// 3. Boot baby ---------------------------------------------------------------
+// 4. Boot baby ---------------------------------------------------------------
 window.addEventListener("load", run)
 
 function run() {
@@ -158,11 +164,4 @@ function run() {
             ctx.restore()
         }
     }
-}
-
-// * 4. auto redirect https
-
-var host = "superlowr.es"
-if (window.location.host == host && window.location.protocol != "https:") {
-    window.location.protocol = "https:"
 }
