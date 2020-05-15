@@ -193,6 +193,11 @@
         "nom": "Samuel Dumez",
         "dossier": "sam/fontfface",
         "description": "alphabettest."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/main",
+        "description": "Timeline d'expérimentations formelles."
     }
 
 ]
