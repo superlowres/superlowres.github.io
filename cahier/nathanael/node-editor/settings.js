@@ -6,4 +6,4 @@ const SETTINGS = {
     ShaderRes: 64
 }
 
-var ShaderRes = 16;
+var ShaderRes = 32;
