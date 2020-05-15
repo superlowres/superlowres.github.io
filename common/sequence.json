@@ -44,6 +44,11 @@
         "description": "Conversion des coordonnes en pixels a coord. cell."
     },
     {
+        "nom": "Andreas Gysin",
+        "dossier": "andreas/ex_10_proportional",
+        "description": "Matrice 'responsive'."
+    },
+    {
         "nom": "Achille Masson",
         "dossier": "achille/type_generator_2.0",
         "description": "type_generator_2"
@@ -56,32 +61,32 @@
     {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/f-solver_buggy",
-        "description": "Glitch Fluid"
+        "description": "Glitch Fluid."
     },
     {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/f-solver",
-        "description": "Tweakable fluid sim"
+        "description": "Tweakable fluid sim."
     },
     {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/f-solver_3d",
-        "description": "Rutt-Etra-like vizualisation of previous fluidsim"
+        "description": "Rutt-Etra-like vizualisation of previous fluidsim."
     },
     {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/automata-ascii",
-        "description": "Smooth Brain: tweakable cellular automata"
+        "description": "Smooth Brain: tweakable cellular automata."
     },
     {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/automata-real-time-infinite-scroll",
-        "description": "Smooth Brain but with realtime line drawing"
+        "description": "Smooth Brain but with realtime line drawing."
     },
     {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/node-editor",
-        "description": "general simulation tool"
+        "description": "General simulation tool."
     },
     {
         "nom": "Mélanie Fontaine",
@@ -90,7 +95,7 @@
     },
     {
         "nom": "Elodie Anglade",
-        "dossier": "elodie/day4",
+        "dossier": "elodie/InspireMe",
         "description": "InspireMe tool"
     },
     {
@@ -135,7 +140,32 @@
     },
     {
         "nom": "Salome Dotter",
-        "dossier": "salome/webcam_pixel",
-        "description": "pose and puzzle"
+        "dossier": "salome/pose_and_puzzle",
+        "description": "Pose and Puzzle !"
+    },
+    {
+        "nom": "Iris Moine",
+        "dossier": "iris/iris_musique_4",
+        "description": "interactive_installation"
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/01_grid",
+        "description": "Pattern Grid."
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/02_lines",
+        "description": "Pattern Diagonal."
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/03_mouse",
+        "description": "Division souris."
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/04_divide-sliders",
+        "description": "Générateur de pattern dans le but d'en créer des textiles."
     }
 ]
