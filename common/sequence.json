@@ -17,7 +17,7 @@
     {
         "nom" : "Antoine Contreras Salazar",
         "dossier" : "antoine/map_antoine",
-        "description" : "Live Visuals Generation based on a webcam input."
+        "description" : "Automatic map generation."
 
     },
     {
@@ -119,6 +119,16 @@
         "nom": "Jamy Herrmann",
         "dossier": "jamy/loweredreality",
         "description": "Réalité diminuée en basse résolution."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/main",
+        "description": "Pixel based grid systems."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/grid",
+        "description": "Pixel based grid systems."
     },
     {
         "nom": "Salome Dotter",
