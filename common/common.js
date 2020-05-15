@@ -54,7 +54,7 @@ function run() {
             <li class="over"><a class="btn btn_next" href="/cahier/${next.dossier}"></a></li>
             <li class="over"><a class="btn btn_home" href="/index.html"></a></li>
             <li><span class="index"><sup>${(current_index + 1)}</sup>/<sub>${data.length}<sub><span></li>
-            <li class="unbreak"><span class="nom">${data[current_index].nom}<span></li>
+            <li><span class="nom">${data[current_index].nom}<span></li>
             <li class="over"><span class="btn btn_play"></span></li>
             <li class="break"><canvas></canvas></li>
             </ul>
