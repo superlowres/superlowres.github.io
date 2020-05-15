@@ -50,12 +50,12 @@ function run() {
 
         let html = `
             <ul>
-            <li><a class="btn btn_prev" href="/cahier/${prev.dossier}"></a></li>
-            <li><a class="btn btn_next" href="/cahier/${next.dossier}"></a></li>
-            <li><a class="btn btn_home" href="/index.html"></a></li>
+            <li class="over"><a class="btn btn_prev" href="/cahier/${prev.dossier}"></a></li>
+            <li class="over"><a class="btn btn_next" href="/cahier/${next.dossier}"></a></li>
+            <li class="over"><a class="btn btn_home" href="/index.html"></a></li>
             <li><span class="index"><sup>${(current_index + 1)}</sup>/<sub>${data.length}<sub><span></li>
             <li class="unbreak"><span class="nom">${data[current_index].nom}<span></li>
-            <li><span class="btn btn_play"></span></li>
+            <li class="over"><span class="btn btn_play"></span></li>
             <li class="break"><canvas></canvas></li>
             </ul>
         `;
@@ -112,20 +112,25 @@ function run() {
 
         const canvas = menu.querySelector("canvas")
         const ctx = canvas.getContext('2d')
+        const r = window.devicePixelRatio
         const w = 128
-        const h = 24
-        canvas.width = w
-        canvas.height = h
+        const h = 20
+        canvas.width = w * r
+        canvas.height = h * r
         canvas.style.width = w + "px"
         canvas.style.height = h + "px"
 
-        ctx.strokeStyle = 'white'
-        ctx.fillStyle   = 'white'
-        ctx.lineWidth   = 1
+        ctx.strokeStyle = 'black'
+        ctx.fillStyle   = 'black'
+        ctx.lineWidth   = 0.5
+
+        ctx.save()
+        ctx.scale(r, r)
         ctx.beginPath()
         ctx.moveTo(0, h/2)
         ctx.lineTo(w, h/2)
         ctx.stroke()
+        ctx.restore()
 
         function render() {
 
@@ -133,6 +138,8 @@ function run() {
 
             analyser.getByteTimeDomainData(buffer_data)
 
+            ctx.save()
+            ctx.scale(r, r)
             ctx.clearRect(0, 0, w, h)
             ctx.beginPath()
             for (let i=0; i<=buffer_data.length; i++){
@@ -147,6 +154,7 @@ function run() {
             ctx.beginPath()
             ctx.ellipse(idx+rad, y, rad, rad, 0, 0, Math.PI * 2, false)
             ctx.fill()
+            ctx.restore()
         }
     }
 }
