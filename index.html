@@ -55,7 +55,10 @@
 </pre>
 
         <script type="text/javascript">
-
+            var host = "superlowr.es"
+            if (window.location.host == host && window.location.protocol != "https:") {
+                window.location.protocol = "https:"
+            }
             fetch("common/sequence.json").then(function(res){
                 return res.json()
             }).then(function(json){
