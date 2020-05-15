@@ -116,11 +116,6 @@
     },
     {
         "nom": "Soraya Camina",
-        "dossier": "soraya/03_mouse",
-        "description": "Division souris."
-    },
-    {
-        "nom": "Soraya Camina",
         "dossier": "soraya/04_divide-sliders",
         "description": "Générateur de pattern dans le but d'en créer des textiles."
     },
