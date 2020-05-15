@@ -125,6 +125,19 @@ function keyPressed() {
 		
 		saveCanvas(mycanvas, "mypuzzle", "png")
 	}
+	if (keyCode === 40) {
+		console.log(40);
+
+		datadraw = new Array(num_x * num_y).fill([0, 0, 0])
+		//revenir au début, tous les pixels doivent être black
+		
+		//data = new Array(num_x * num_y).fill([0, 0, 0])
+		//data[i + j * num_x] = [0, 0, 0]
+	}
+	if (keyCode === 13) {
+		
+		//audio input
+	}
 }
 
 function mousePressed(event) {
