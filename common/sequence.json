@@ -10,6 +10,17 @@
         "description": "type_generator_3"
     },
     {
+        "nom" : "Bogdan Nastase",
+        "dossier" : "bogdan/Live_Vis_4",
+        "description" : "Live Visuals Generation based on a webcam input."
+    },
+    {
+        "nom" : "Antoine Contreras Salazar",
+        "dossier" : "antoine/map_antoine",
+        "description" : "Live Visuals Generation based on a webcam input."
+
+    },
+    {
         "nom": "Nathanaël Vianin",
         "dossier": "nathanael/f-solver_buggy",
         "description": "Glitch Fluid."
@@ -88,6 +99,21 @@
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_6-sdf-multi-sketch",
         "description": "SDF repertoire de sketch"
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/qrcode",
+        "description": "Générateur aléatoire de QRcode."
+    },
+        {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/codebar",
+        "description": "Générateur aléatoire de code-bar."
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/loweredreality",
+        "description": "Réalité diminuée en basse résolution."
     },
     {
         "nom": "Salome Dotter",
