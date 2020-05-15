@@ -47,9 +47,7 @@ var linking = false;
 var link1;
 var link2;
 
-function preload() {
-    loadFont("/dos-font.otf");
-}
+function preload() {}
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);

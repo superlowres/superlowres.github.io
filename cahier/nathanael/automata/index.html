@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <title>P5JS canvas</title>
     <meta name="description" content="P5JS canvas template" />
@@ -13,41 +14,44 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <link rel="apple-touch-icon" href="/common/icon_192.png" />
     <link rel="shortcut icon" href="/common/icon_32.png" />
-    <link rel="stylesheet" href="/common/common.css" type="text/css"></style>
-    <style type="text/css">
-      html {
-        height: 100vh;
-        image-rendering: pixelated;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      canvas {
-        /* display: block; */
-        /* width: 100vw;
-        height: 100vh; */
-      }
-
-      .datContainer {
-        position: absolute;
-        bottom: 20px;
-        right: 0px;
-        transform: scale(1);
-      }
+    <link rel="stylesheet" href="/common/common.css" type="text/css">
     </style>
-  </head>
+    <style type="text/css">
+        html {
+            height: 100vh;
+            image-rendering: pixelated;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        canvas {
+            /* display: block; */
+            /* width: 100vw;
+        height: 100vh; */
+        }
+        
+        .datContainer {
+            position: absolute;
+            bottom: 20px;
+            right: 0px;
+            transform: scale(1);
+        }
+    </style>
+</head>
 
-  <body>
+<body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
     <script src="p5.asciiart.js"></script>
     <script src="./dat.gui.js"></script>
     <script type="module" src="/common/common.js"></script>
     <script src="main.js"></script>
     <div class="datContainer"></div>
-  </body>
+</body>
+
 </html>
