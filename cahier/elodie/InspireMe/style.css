@@ -17,6 +17,7 @@
   }
 
   h1{
+    padding-top:20%;
     white-space: nowrap;
     color: white;
     font-family: helvetica, sans-serif;
@@ -26,8 +27,11 @@
   }
 
   .sidebar p, .sidebar h1, .sidebar a {
+      
     padding-left: 8%;
     padding-right: 8%;
+      margin-top: 0;
+    margin-bottom: 0;
   }
   
   .sidebar a {
@@ -81,10 +85,10 @@
 
 #my-gui-container{
     padding-left: 8%;
-    position: absolute;
-    bottom:200px;
-    right:0;
-  z-index: 10;
+    position: relative;
+    z-index: 10;
+    float: right;
+    top: 60vh;
 }
 
 /* CUSTOM DAT.GUI */
