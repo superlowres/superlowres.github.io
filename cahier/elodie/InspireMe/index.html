@@ -38,19 +38,22 @@
 		<h1>Lacking inspiration?</h1>
 		<p>InspireMe is a creative tool that allows you to create a super-low-resolution design. This tool acts as clouds in the sky: sometimes, when you look at them closely, you'll start seeing things. The aim of this tool is to inspire you in a creative way!</p>
 		<div id="examples_container" class="invisible">
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			<div class="img_container"><img src ="imgs/example_1.GIF"></div>
-			
+			<div class="img_container"><img src ="imgs/example_1.gif"></div>
+			<div class="img_container"><img src ="imgs/example_2.gif"></div>
+			<div class="img_container"><img src ="imgs/example_3.gif"></div>
+			<div class="img_container"><img src ="imgs/example_4.gif"></div>
+			<div class="img_container"><img src ="imgs/example_5.gif"></div>
+			<div class="img_container"><img src ="imgs/example_6.gif"></div>
+			<div class="img_container"><img src ="imgs/example_7.gif"></div>
+			<div class="img_container"><img src ="imgs/example_8.gif"></div>
+			<div class="img_container"><img src ="imgs/example_9.gif"></div>
+			<div class="img_container"><img src ="imgs/example_2.gif"></div>
 		</div>
 		<a id="myToggle" onclick="toggleSidebar()">See examples</a>
+		
+	  </div>
+	  <div id="my-gui-container">
+		<h1>Settings</h1>
 	  </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
 	<script type="module" src="/common/common.js"></script>
@@ -61,20 +64,28 @@
 	var mini = true;
 
 	function toggleSidebar() {
+		
 	  if (mini) {
+		
 		document.getElementById("mySidebar").style.width = "100vw";
 		document.getElementById("mySidebar").style.height = "100vh";
 		document.getElementById("myToggle").innerText = "Back to tool";
 		document.getElementById("examples_container").classList.remove("invisible");
+		document.getElementById("mySidebar").style.zIndex = "15";
+	
+		
 
-		//document.getElementById("defaultCanvas0").style.marginLeft = "250px";
+		
 		this.mini = false;
 	  } else {
-		document.getElementById("mySidebar").style.width = "245px";
-		document.getElementById("mySidebar").style.height = "77vh";
+		document.getElementById("mySidebar").style.width = "265px";
+		document.getElementById("mySidebar").style.height = "100vh";
 		document.getElementById("myToggle").innerText = "See examples";
 		document.getElementById("examples_container").classList.add("invisible");
-		//document.getElementById("defaultCanvas0").style.marginLeft = "85px";
+		document.getElementById("mySidebar").style.zIndex = "1";
+		
+		
+		
 		this.mini = true;
 	  }
 	}
