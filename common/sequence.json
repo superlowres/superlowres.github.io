@@ -187,11 +187,6 @@
     },
     {
         "nom": "Salomé Dotter",
-        "dossier": "salome/brainstorm_and_puzzle",
-        "description": "path of the week between test and brainstorms"
-    },
-    {
-        "nom": "Salomé Dotter",
         "dossier": "salome/salome/pose_and_puzzle",
         "description": "the final project"
     },
