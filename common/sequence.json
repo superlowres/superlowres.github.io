@@ -1,13 +1,29 @@
 [
     {
         "nom": "Achille Masson",
-        "dossier": "achille/type_generator_2.0",
-        "description": "type_generator_2"
+        "dossier": "achille/experiment",
+        "description": "Experiment."
     },
     {
         "nom": "Achille Masson",
-        "dossier": "achille/type_generator_3.0",
-        "description": "type_generator_3"
+        "dossier": "achille/type_generator",
+        "description": "Type generator."
+    },
+    {
+        "nom": "Achille Masson",
+        "dossier": "achille/superlowres_font",
+        "description": "Superlowres font."
+    },
+    {
+        "nom" : "Bogdan Nastase",
+        "dossier" : "bogdan/Live_Vis_4",
+        "description" : "Live Visuals Generation based on a webcam input."
+    },
+    {
+        "nom" : "Antoine Contreras Salazar",
+        "dossier" : "antoine/map_antoine",
+        "description" : "Automatic map generation."
+
     },
     {
         "nom": "Nathanaël Vianin",
@@ -40,20 +56,34 @@
         "description": "General simulation tool."
     },
     {
-        "nom": "Mélanie Fontaine",
-        "dossier": "melanie/ex_7.5",
-        "description": "oui oui"
+        "nom": "Elodie Anglade",
+        "dossier": "elodie/01-CodeCompilation",
+        "description": "InspireMe tool."
     },
     {
         "nom": "Elodie Anglade",
-        "dossier": "elodie/InspireMe",
-        "description": "InspireMe tool"
+        "dossier": "elodie/02-InspireMe",
+        "description": "InspireMe tool."
     },
-    
+    {
+        "nom": "Lily Rose Hold",
+        "dossier": "lily/ex_11_image_gallery",
+        "description": "Image Gallery"
+    },
+    {
+        "nom": "Lily Rose Hold",
+        "dossier": "lily/ex_8_lowhigh",
+        "description": "Create a pixel collage with my tool."
+    },
+    {
+        "nom": "Lily Rose Hold",
+        "dossier": "lily/ex_9_lowhigh_dynamic",
+        "description": "Pixelated dynamic grid, your mouse hover reveals what's underneath."
+    },
     {
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_0-sdf-draw",
-        "description": "SDF dessin de formes"
+        "description": "SDF dessin de formes."
     },
     {
         "nom": "Loris Briguet",
@@ -86,14 +116,89 @@
         "description": "SDF repertoire de sketch"
     },
     {
-        "nom": "Salome Dotter",
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/qrcode",
+        "description": "Générateur aléatoire de QRcode."
+    },
+        {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/codebar",
+        "description": "Générateur aléatoire de code-bar."
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/loweredreality",
+        "description": "Réalité diminuée en basse résolution."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/main",
+        "description": "Pixel based grid systems."
+    },
+    {
+        "nom": "Martial Grin",
+        "dossier": "martial/grid",
+        "description": "Pixel based grid systems."
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_1.1",
+        "description": "Grille clignotante"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_1.2",
+        "description": "Objets et couleurs"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_2",
+        "description": "Objets et couleurs2"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_3.1",
+        "description": "essai grille"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_3.2",
+        "description": "Objet et souris"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_3.3",
+        "description": "Déplacement sur la grille"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_6.2",
+        "description": "Fuseaux de lumière"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_7.3",
+        "description": "Chemin de couleurs"
+    },
+    {
+        "nom": "Mélanie Fontaine",
+        "dossier": "melanie/ex_7.5",
+        "description": "Pet or food"
+    },
+    {
+        "nom": "Salomé Dotter",
         "dossier": "salome/pose_and_puzzle",
-        "description": "Pose and Puzzle !"
+        "description": "the final project"
     },
     {
         "nom": "Iris Moine",
         "dossier": "iris/iris_musique_4",
-        "description": "interactive_installation"
+        "description": "Drumsrider interactive installation"
+    },
+    {
+        "nom": "Iris Moine",
+        "dossier": "iris/iris_gallery",
+        "description": "Day 3 installation sketch"
     },
     {
         "nom": "Soraya Camina",
@@ -108,42 +213,47 @@
     {
         "nom": "Soraya Camina",
         "dossier": "soraya/03_mouse",
-        "description": "Division souris."
+        "description": "Division en bougeant la souris."
     },
     {
         "nom": "Soraya Camina",
         "dossier": "soraya/04_divide-sliders",
-        "description": "Générateur de pattern dans le but d'en créer des textiles."
+        "description": "Générateur modulable de pattern dans le but d'en créer des textiles."
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/05_gallerie_patterns",
+        "description": "Galerie des patterns créés."
+    },
+    {
+        "nom": "Soraya Camina",
+        "dossier": "soraya/06_gallerie_textiles",
+        "description": "Application des patterns sur textiles."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_1",
+        "description": "Recherches 1."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_2",
+        "description": "Recherches 2."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_3",
+        "description": "Recherches 3."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_4",
+        "description": "Recherches 4."
     },
     {
         "nom": "Samuel Dumez",
         "dossier": "sam/fontfface",
         "description": "Visage Typographique"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_1",
-        "description": "Recherches_1"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/echerche_2",
-        "description": "Recherches_2"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/echerche_3",
-        "description": "Recherches_3"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/echerche_4",
-        "description": "Recherches_4"
-    },
-    {
-        "nom": "Andreas Gysin",
-        "dossier": "andreas/ex_1_SDF",
-        "description": "Example SDF."
     },
     {
         "nom": "Andreas Gysin",
@@ -189,30 +299,5 @@
         "nom": "Andreas Gysin",
         "dossier": "andreas/ex_10_proportional",
         "description": "Matrice 'responsive'."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/fontfface",
-        "description": "Visage Typographique"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_1",
-        "description": "Recherches_1"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_2",
-        "description": "Recherches_2"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_3",
-        "description": "Recherches_3"
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_4",
-        "description": "Recherches_4"
     }
 ]
