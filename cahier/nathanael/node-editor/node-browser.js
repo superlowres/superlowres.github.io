@@ -2,6 +2,7 @@ class NodeBrowser {
     constructor() {
         this.width = 200;
         this.x = window.innerWidth - this.width;
+        this.y = 25;
 
         this.sliderPos = 7;
 
@@ -11,13 +12,19 @@ class NodeBrowser {
     }
 
     update() {
+        if (this.sliderPos < 7) {
+            this.sliderPos = 7
+        } else if (this.sliderPos > height - 7) {
+            this.sliderPos = height - 7;
+        }
+
         // bg
         fill(70);
         noStroke();
-        rect(this.x, 0, width, height);
+        rect(this.x, this.y, width, height);
         // slider
         fill(84);
-        rect(width - SETTINGS.sliderWidth, 0, width, height);
+        rect(width - SETTINGS.sliderWidth, this.y, width, height);
         fill(200);
         ellipse(width - SETTINGS.sliderWidth / 2, this.sliderPos, 8);
         // slider movement
@@ -31,7 +38,7 @@ class NodeBrowser {
             var node = this.nodes[i];
             node.x = width - this.width + (this.width - node.width - SETTINGS.sliderWidth) / 2;
             node.y = (300 * (i) - (this.sliderPos) + 30 * (i));
-            node.y += 30;
+            node.y += 30 + this.y;
             node.update();
             node.draw();
         }
