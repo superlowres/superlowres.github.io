@@ -10,6 +10,7 @@ let pause = false //pause de la touche
 let data = []  // LE TABLAEAU en variable qui peux changer
 let coulpose
 let datadraw
+let savecanvas 
 
 let currentColor = 0;
 
@@ -123,7 +124,12 @@ function keyPressed() {
 	}
 	if (keyCode === 38) {
 		
-		saveCanvas(mycanvas, "mypuzzle", "png")
+		const ox = (width - num_x * cell_w) / 2 //Constante o de x, width -num_x * cell_w
+		const oy = (height - num_y * cell_h) / 2 //Constante o de y, 
+
+		savecanvas = createGraphics (num_x * cell_w, num_y * cell_h)
+		savecanvas.image (mycanvas, 0,0, num_x * cell_w, num_y * cell_h, ox, oy,num_x * cell_w, num_y * cell_h )
+		saveCanvas(savecanvas, "mypuzzle", "png")
 	}
 	if (keyCode === 40) {
 		console.log(40);
