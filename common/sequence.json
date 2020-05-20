@@ -187,8 +187,13 @@
     },
     {
         "nom": "Salomé Dotter",
+        "dossier": "salome/brainstorm_and_puzzle",
+        "description": "Brainstorm and Puzzle!"
+    },
+    {
+        "nom": "Salomé Dotter",
         "dossier": "salome/pose_and_puzzle",
-        "description": "the final project"
+        "description": "Pose and Puzzle!"
     },
     {
         "nom": "Iris Moine",
