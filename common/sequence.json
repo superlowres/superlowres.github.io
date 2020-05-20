@@ -15,45 +15,15 @@
         "description": "Superlowres font."
     },
     {
-        "nom" : "Bogdan Nastase",
-        "dossier" : "bogdan/Live_Vis_4",
-        "description" : "Live Visuals Generation based on a webcam input."
-    },
-    {
         "nom" : "Antoine Contreras Salazar",
         "dossier" : "antoine/antoine_maps_wave",
         "description" : "No Stop Mapping."
 
     },
     {
-        "nom": "Nathanaël Vianin",
-        "dossier": "nathanael/f-solver_buggy",
-        "description": "Glitch Fluid."
-    },
-    {
-        "nom": "Nathanaël Vianin",
-        "dossier": "nathanael/f-solver",
-        "description": "Tweakable fluid sim."
-    },
-    {
-        "nom": "Nathanaël Vianin",
-        "dossier": "nathanael/f-solver_3d",
-        "description": "Rutt-Etra-like vizualisation of previous fluidsim."
-    },
-    {
-        "nom": "Nathanaël Vianin",
-        "dossier": "nathanael/automata-ascii",
-        "description": "Smooth Brain: tweakable cellular automata."
-    },
-    {
-        "nom": "Nathanaël Vianin",
-        "dossier": "nathanael/automata-real-time-infinite-scroll",
-        "description": "Smooth Brain but with realtime line drawing."
-    },
-    {
-        "nom": "Nathanaël Vianin",
-        "dossier": "nathanael/node-editor",
-        "description": "General simulation tool."
+        "nom" : "Bogdan Nastase",
+        "dossier" : "bogdan/Live_Vis_4",
+        "description" : "Live Visuals Generation based on a webcam input."
     },
     {
         "nom": "Elodie Anglade",
@@ -64,6 +34,31 @@
         "nom": "Elodie Anglade",
         "dossier": "elodie/02-InspireMe",
         "description": "InspireMe tool."
+    },
+    {
+        "nom": "Iris Moine",
+        "dossier": "iris/iris_musique_4",
+        "description": "Drumsrider interactive installation"
+    },
+    {
+        "nom": "Iris Moine",
+        "dossier": "iris/iris_gallery",
+        "description": "Day 3 installation sketch"
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/qrcode",
+        "description": "Générateur aléatoire de QRcode."
+    },
+        {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/codebar",
+        "description": "Générateur aléatoire de code-bar."
+    },
+    {
+        "nom": "Jamy Herrmann",
+        "dossier": "jamy/loweredreality",
+        "description": "Réalité diminuée en basse résolution."
     },
     {
         "nom": "Lily Rose Hold",
@@ -114,21 +109,6 @@
         "nom": "Loris Briguet",
         "dossier": "loris/ex-9_6-sdf-multi-sketch",
         "description": "SDF repertoire de sketch"
-    },
-    {
-        "nom": "Jamy Herrmann",
-        "dossier": "jamy/qrcode",
-        "description": "Générateur aléatoire de QRcode."
-    },
-        {
-        "nom": "Jamy Herrmann",
-        "dossier": "jamy/codebar",
-        "description": "Générateur aléatoire de code-bar."
-    },
-    {
-        "nom": "Jamy Herrmann",
-        "dossier": "jamy/loweredreality",
-        "description": "Réalité diminuée en basse résolution."
     },
     {
         "nom": "Martial Grin",
@@ -186,6 +166,61 @@
         "description": "Pet or food"
     },
     {
+        "nom": "Nathanaël Vianin",
+        "dossier": "nathanael/f-solver_buggy",
+        "description": "Glitch Fluid."
+    },
+    {
+        "nom": "Nathanaël Vianin",
+        "dossier": "nathanael/f-solver",
+        "description": "Tweakable fluid sim."
+    },
+    {
+        "nom": "Nathanaël Vianin",
+        "dossier": "nathanael/f-solver_3d",
+        "description": "Rutt-Etra-like vizualisation of previous fluidsim."
+    },
+    {
+        "nom": "Nathanaël Vianin",
+        "dossier": "nathanael/automata-ascii",
+        "description": "Smooth Brain: tweakable cellular automata."
+    },
+    {
+        "nom": "Nathanaël Vianin",
+        "dossier": "nathanael/automata-real-time-infinite-scroll",
+        "description": "Smooth Brain but with realtime line drawing."
+    },
+    {
+        "nom": "Nathanaël Vianin",
+        "dossier": "nathanael/node-editor",
+        "description": "General simulation tool."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_1",
+        "description": "Recherches 1."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_2",
+        "description": "Recherches 2."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_3",
+        "description": "Recherches 3."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/recherche_4",
+        "description": "Recherches 4."
+    },
+    {
+        "nom": "Samuel Dumez",
+        "dossier": "sam/fontfface",
+        "description": "Visage Typographique"
+    },
+    {
         "nom": "Salomé Dotter",
         "dossier": "salome/brainstorm_and_puzzle",
         "description": "Brainstorm and Puzzle!"
@@ -194,16 +229,6 @@
         "nom": "Salomé Dotter",
         "dossier": "salome/pose_and_puzzle",
         "description": "Pose and Puzzle!"
-    },
-    {
-        "nom": "Iris Moine",
-        "dossier": "iris/iris_musique_4",
-        "description": "Drumsrider interactive installation"
-    },
-    {
-        "nom": "Iris Moine",
-        "dossier": "iris/iris_gallery",
-        "description": "Day 3 installation sketch"
     },
     {
         "nom": "Soraya Camina",
@@ -234,32 +259,9 @@
         "nom": "Soraya Camina",
         "dossier": "soraya/06_gallerie_textiles",
         "description": "Application des patterns sur textiles."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_1",
-        "description": "Recherches 1."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_2",
-        "description": "Recherches 2."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_3",
-        "description": "Recherches 3."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/recherche_4",
-        "description": "Recherches 4."
-    },
-    {
-        "nom": "Samuel Dumez",
-        "dossier": "sam/fontfface",
-        "description": "Visage Typographique"
-    },
+    }
+    /*
+    ,
     {
         "nom": "Andreas Gysin",
         "dossier": "andreas/ex_2_SDF_smooth",
@@ -305,4 +307,5 @@
         "dossier": "andreas/ex_10_proportional",
         "description": "Matrice 'responsive'."
     }
+    */
 ]

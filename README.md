@@ -13,7 +13,7 @@ Bogdan Nastase
 Elodie Anglade  
 Iris Moine  
 Jamy Herrmann  
-Lily Rose  
+Lily Rose Hold  
 Loris Briguet  
 Martial Grin  
 Mélanie Fontaine  
