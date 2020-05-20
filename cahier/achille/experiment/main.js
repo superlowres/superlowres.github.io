@@ -1,5 +1,5 @@
 const NUM_X = 70
-const NUM_Y = 30
+const NUM_Y = 40
 
 
 const data = new Array(NUM_X * NUM_Y)
