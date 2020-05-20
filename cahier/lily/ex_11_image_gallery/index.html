@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Super Simple Image Gallery</title>
+	<title>Inspirational Image Gallery</title>
 	<meta name="viewport" 								content="width=device-width,initial-scale=1">
 	<meta name="mobile-web-app-capable" 				content="yes">
 	<meta name="apple-mobile-web-app-capable" 			content="yes">
@@ -18,15 +18,16 @@
 		}
 		body{
 			margin:0;
+			background-color: rgb(220,220,220);
 		}
 		.image-gallery{
 			position: absolute;
-			left:4em;
-			right:4em;
-			top:4em;
-			bottom:6em;
+			left:0em;
+			top:0em;
+			bottom:0em;
+			right:0em;
 			background-position: center center;
-			background-size: contain;
+			background-size: cover;
 			background-repeat: no-repeat;
 			cursor: pointer;
 		}
@@ -34,17 +35,20 @@
 			margin-left: 2em;
 			margin-top: 1em;
 			width: 20em;
-
+			display: none;
+		}
+		.cursor-r {
+				cursor : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-5 -5 40 40" fill="none" stroke="rgb(0,0,0)" stroke-width="1.5" stroke-linejoin="miter"><path d="M0,15 L30,15"/><path d="M15,0 L30,15 L15,30"/></svg>') 20 20, auto;
 		}
 
-		.monospace {
-  			font-family: "Lucida Console", Courier, monospace;
+		.cursor-l {
+				cursor : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-5 -5 40 40" fill="none" stroke="rgb(0,0,0)" stroke-width="1.5" stroke-linejoin="miter"><path d="M0,15 L30,15"/><path d="M15,0 L0,15 L15,30"/></svg>') 20 20, auto;
 		}
 
 	</style>
 </head>
 
-<body class="disable-select disable-scroll">
+<body class="disable-select">
 
 	<div class="image-gallery"></div>
 	<div class="image-description"></div>
@@ -53,60 +57,70 @@
 		window.addEventListener("load", e => {
 			const sequence = [
 				{
-					url :"images/img_1.jpg",
-					desc : "Example"
+					url :"images/img_a.png",
+					desc : "image nr. 1"
 				},
 				{
-					url :"images/img_2.jpg",
-					desc : "Example"
+					url :"images/img_b.png",
+					desc : "image nr. 2"
 				},
 				{
-					url :"images/img_3.jpg",
-					desc : "Example"
-				},
-				,
-				{
-					url :"images/img_4.jpg",
-					desc : "Example"
+					url :"images/img_c.png",
+					desc : "image nr. 3"
 				},
 				{
-					url :"images/img_5.jpg",
-					desc : "Example"
+					url :"images/img_d.png",
+					desc : "image nr. 4"
 				},
 				{
-					url :"images/img_6.jpg",
-					desc : "Example"
+					url :"images/img_e.png",
+					desc : "image nr. 5"
 				},
 				{
-					url :"images/img_7.jpg",
-					desc : "Example"
+					url :"images/img_f.png",
+					desc : "image nr. 6"
 				},
 				{
-					url :"images/img_8.jpg",
-					desc : "Example"
+					url :"images/img_g.png",
+					desc : "image nr. 7"
 				},
 				{
-					url :"images/img_9.jpg",
-					desc : "Une inspiration pour créer des tableaux avec mon outil sont les peintures et collages de Picasso."
-				},
-				{
-					url :"images/img_10.jpg",
-					desc : "Une inspiration pour créer des tableaux avec mon outil sont les peintures et collages de Picasso."
+					url :"images/img_h.png",
+					desc : "image nr. 8"
 				},
 			]
+
+			const gal = document.querySelector(".image-gallery")
+			const des = document.querySelector(".image-description")
 
 			let current_index = 0
 			setImage(sequence[current_index])
 
-			document.addEventListener("click", e => {
-				current_index = (current_index + 1) % sequence.length
+ 			gal.addEventListener("click", e => {
+				const x = e.offsetX
+				const w = e.target.offsetWidth
+				if (x > w / 2) {
+					current_index = (current_index + 1) % sequence.length
+				} else {
+					current_index = (current_index - 1 + sequence.length) % sequence.length
+				}
 				setImage(sequence[current_index])
+			})
+ 			gal.addEventListener("mousemove", e => {
+				gal.classList.remove("cursor-r")
+				gal.classList.remove("cursor-l")
+				const x = e.offsetX
+				const w = e.target.offsetWidth
+				if (x > w / 2) {
+					gal.classList.add("cursor-r")
+				} else {
+					gal.classList.add("cursor-l")
+				}
 			})
 
 			function setImage(obj) {
-				document.querySelector(".image-gallery").style.backgroundImage = "url(" + obj.url + ")"
-				document.querySelector(".image-description").innerHTML = obj.desc
-
+				gal.style.backgroundImage = "url(" + obj.url + ")"
+				des.innerHTML = obj.desc
 			}
 
 		})
