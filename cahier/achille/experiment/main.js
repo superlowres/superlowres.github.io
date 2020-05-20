@@ -1,5 +1,5 @@
-const NUM_X = 80
-const NUM_Y = 40
+const NUM_X = 70
+const NUM_Y = 30
 
 
 const data = new Array(NUM_X * NUM_Y)
@@ -54,7 +54,8 @@ function draw(){
 
 	// Preview
 
-	stroke(255)
+	//stroke(255)
+	noStroke()
 	let italic = 0;
 	for(let j=0; j<NUM_Y; j++) {
 		for(let i=0; i<NUM_X; i++) {
@@ -64,7 +65,7 @@ function draw(){
 				const idx = i + j * NUM_X
 				const v = data[idx]
 				fill(v * 255)
-				rect(x, y, CELL, CELL)
+				rect(x, y, CELL-1, CELL-1)
 		}
 	}
 
