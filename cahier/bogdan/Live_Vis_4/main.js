@@ -1,8 +1,8 @@
 /**
  * 	Reduction d'une image
  */
-let num_y = 60
-let num_x = 60
+let num_y = 50
+let num_x = 50
 let cell_w = 10
 let cell_h = 10
 let capture, offscreen
@@ -211,7 +211,7 @@ function keyPressed() {
 	if (keyCode === 52)
 		mode = 4
 
-	/*	
+	/*
 	//W
 	if (keyCode === 87) {
 		num_x++
