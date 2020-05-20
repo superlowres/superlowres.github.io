@@ -35,11 +35,18 @@
 			margin-top: 1em;
 			width: 20em;
 		}
+		.cursor-r {
+		    cursor : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-5 -5 40 40" fill="none" stroke="rgb(0,0,0)" stroke-width="1.5" stroke-linejoin="miter"><path d="M0,15 L30,15"/><path d="M15,0 L30,15 L15,30"/></svg>') 20 20, auto;
+		}
+
+		.cursor-l {
+		    cursor : url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-5 -5 40 40" fill="none" stroke="rgb(0,0,0)" stroke-width="1.5" stroke-linejoin="miter"><path d="M0,15 L30,15"/><path d="M15,0 L0,15 L15,30"/></svg>') 20 20, auto;
+		}
 
 	</style>
 </head>
 
-<body class="disable-select disable-scroll">
+<body class="disable-select">
 
 	<div class="image-gallery"></div>
 	<div class="image-description"></div>
@@ -87,23 +94,39 @@
 					url :"",
 					desc : "Thanks for this week, Andreas Gysin! Thanks for your help Callum Ross. Salomé-Dotter. "
 				},
-				
-				
-				
 			]
+
+			const gal = document.querySelector(".image-gallery")
+			const des = document.querySelector(".image-description")
 
 			let current_index = 0
 			setImage(sequence[current_index])
 
-			document.addEventListener("click", e => {
-				current_index = (current_index + 1) % sequence.length
+ 			gal.addEventListener("click", e => {
+				const x = e.offsetX
+				const w = e.target.offsetWidth
+				if (x > w / 2) {
+					current_index = (current_index + 1) % sequence.length
+				} else {
+					current_index = (current_index - 1 + sequence.length) % sequence.length
+				}
 				setImage(sequence[current_index])
+			})
+ 			gal.addEventListener("mousemove", e => {
+				gal.classList.remove("cursor-r")
+				gal.classList.remove("cursor-l")
+				const x = e.offsetX
+				const w = e.target.offsetWidth
+				if (x > w / 2) {
+					gal.classList.add("cursor-r")
+				} else {
+					gal.classList.add("cursor-l")
+				}
 			})
 
 			function setImage(obj) {
-				document.querySelector(".image-gallery").style.backgroundImage = "url(" + obj.url + ")"
-				document.querySelector(".image-description").innerHTML = obj.desc
-
+				gal.style.backgroundImage = "url(" + obj.url + ")"
+				des.innerHTML = obj.desc
 			}
 
 		})
