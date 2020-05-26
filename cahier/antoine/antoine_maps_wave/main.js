@@ -64,7 +64,7 @@ function preload() {
 	// img = loadImage("pal_"+Math.floor(random(5))+".png")
 	img = loadImage("pal_" + 5 + "moutain.png");
 	for (let i = 0; i < 6; i++) {
-		icon[i] = loadImage("icon/icon_" + i + ".png")
+		icon[i] = loadImage("icons/icon_" + i + ".png")
 	}
 
 }
